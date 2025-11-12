@@ -1,4 +1,3 @@
-import { StringDataType } from './../../node_modules/sequelize/types/data-types.d';
 import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from '../config/database';
 
