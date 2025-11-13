@@ -1,11 +1,15 @@
-import { EventoMusicale} from "./EventoMusicale";
-import { Statistica } from "./Statistica";
-import sequelize from "../config/database";
+import MusicEvent from './MusicEvent';
+import Statistic from './Statistic';
+import sequelize from '../config/database';
 
-const modelli = {
-     EventoMusicale,
-     Statistica,
+// Initialize associations if needed
+// For now, models are independent
+
+const models = {
+     MusicEvent,
+     Statistic,
      sequelize,
 };
 
-export default modelli;
+export default models;
+

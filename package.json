@@ -31,6 +31,8 @@
   },
   "dependencies": {
     "dotenv": "^17.2.3",
+    "iobserver": "^0.0.7",
+    "observer": "^0.0.2",
     "rxjs": "^7.8.2",
     "sequelize": "^6.37.7",
     "statistic": "^0.0.4-cbt"
