@@ -4,7 +4,7 @@ services:
     container_name: music_analyzer_db
     environment:
       POSTGRES_DB: music_analyzer
-      POSTGRES_USER: postgres
+      POSTGRES_USER: music_db
       POSTGRES_PASSWORD: postgres
     ports:
       - "5433:5432"
@@ -23,7 +23,7 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
       DB_NAME: music_analyzer
-      DB_USER: postgres
+      DB_USER: music_db
       DB_PASSWORD: postgres
       PORT: 3000
       NODE_ENV: production

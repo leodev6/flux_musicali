@@ -1,4 +1,5 @@
 import sequelize from "../config/database";
+import '../models/MusicEvent';
 
 async function inizializeDatabase(): Promise<void> {
      try {
@@ -11,8 +12,11 @@ async function inizializeDatabase(): Promise<void> {
           await sequelize.authenticate();
           console.log('Connessione al database riuscita!');
 
+          // Controlla che i modelli sono salvati
+          console.log('Modelli registrati:', Object.keys(sequelize.models));
+
           //Sincronizzazione dei modelli di database in corso...
-          //await sequelize.sync(force: false, alter: true);
+          await sequelize.sync({alter: true} );
           console.log('modelli di database Sincronizzato.');
 
 

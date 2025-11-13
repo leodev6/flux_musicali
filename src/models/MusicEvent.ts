@@ -77,5 +77,6 @@ MusicEvent.init(
      }
 );
 
+console.log('Modello MusicEvent inizializzato');
 export default MusicEvent;
 
