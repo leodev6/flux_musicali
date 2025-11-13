@@ -1,6 +1,6 @@
 import sequelize from "../config/database";
 
-async function inizializaDatabase(): Promise<void> {
+async function inizializeDatabase(): Promise<void> {
      try {
           console.log('Connezione al database...');
           console.log(` HOST: ${process.env.DB_HOST || 'localhost'}`);
@@ -14,4 +14,4 @@ async function inizializaDatabase(): Promise<void> {
           console.error('Errore dell\'inizializzazione del database', error);
      }
 }
-inizializaDatabase();
+inizializeDatabase();
