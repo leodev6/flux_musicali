@@ -16,7 +16,7 @@ export class EventController  {
                     date: event,
                });
           } catch (error: any) {
-               res.status(400).json({
+               res.status(401).json({
                     success: false,
                     error: error.message || 'Error creating event',
                }); 
