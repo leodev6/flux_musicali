@@ -1,2 +1,2 @@
 export { IRepository } from './IRepository';
-export { RepositoryEventoMusicale } from './RepositoryEventoMusicali';
+export { MusicEventRepository } from './MusicEventRepository';
