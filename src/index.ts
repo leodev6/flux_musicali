@@ -1,3 +1,4 @@
+import { EventController } from './controllers/EventController';
 import express, { Express } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -5,6 +6,7 @@ import sequelize from './config/database';
 import { MusicEventRepository } from './repositories/MusicEventRepository';
 import { EventProcessingService } from './services/EventProcessingService';
 import { EventSubject } from './observers/EventSubject';
+import { createRoutes } from './routes';
 
 dotenv.config();
 const app: Express = express();
@@ -34,7 +36,24 @@ function initializaServices(){
      const musicEventRepository = new MusicEventRepository();
      //const statisticRepository = new StatisticRepository();
 
-     //Statistic
+     //Subject
+     const eventSubject = new EventSubject();
+
+     //Service
+     const eventProcessingService = new EventProcessingService(musicEventRepository, eventSubject);
+
+     //Observers
+     //eventSubject.attach();
+
+     //Controller 
+     const eventController = new EventController(eventProcessingService);
+
+     //Routes
+     const routes = createRoutes(eventController);
+     app.use('/api', routes);
+
+     console.log('Inizializzazione del servizion corretto.')
+
 
 }
 
