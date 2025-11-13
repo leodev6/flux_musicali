@@ -2,8 +2,8 @@ import MusicEvent from './MusicEvent';
 import Statistic from './Statistic';
 import sequelize from '../config/database';
 
-// Initialize associations if needed
-// For now, models are independent
+//Inizializza le associazioni se necessario
+//Per ora, i modelli sono indipendenti
 
 const models = {
      MusicEvent,

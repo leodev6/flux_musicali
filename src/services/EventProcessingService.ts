@@ -32,10 +32,10 @@ export class EventProcessingService {
      }
 
      async processEvent(eventData: MusicEventInput): Promise<MusicEvent> {
-          // Validate event data
+          //Convalida i dati degli eventi
           this.validateEventData(eventData);
 
-          // Create event in database
+          // Crea evento nel database
           const musicEvent = await this.musicEventRepository.create({
                userId: eventData.userId,
                trackId: eventData.trackId,
@@ -44,10 +44,10 @@ export class EventProcessingService {
                timestamp: new Date(eventData.timestamp),
           });
 
-          // Emit to RxJS stream
+          // Emetti nel flusso RxJS
           this.eventStream$.next(musicEvent);
 
-          // Notify observers
+          // Informare gli osservatori
           await this.eventSubject.notify(musicEvent);
 
           return musicEvent;

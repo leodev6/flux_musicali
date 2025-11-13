@@ -36,7 +36,7 @@ Statistic.init(
           type: {
                type: DataTypes.STRING,
                allowNull: false,
-               comment: 'Type of statistic: most_played_artist, avg_duration, daily_trend',
+               comment: 'Tipo di statistica: artista_più_suonato, durata_media, tendenza_giornaliera',
           },
           value: {
                type: DataTypes.TEXT,

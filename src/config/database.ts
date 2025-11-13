@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Valida variabili d'ambiente richieste
-const variabiliRichieste = ['DB_NAME', 'DB_USER', 'DB_PASSWORD'];
-const variabiliMancanti = variabiliRichieste.filter((nomeVariabile) => !process.env[nomeVariabile]);
+const variabiliRichieste = ['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT'];
+const variabiliMancanti = variabiliRichieste.filter((varName) => !process.env[varName]);
 
 if (variabiliMancanti.length > 0 && !process.env.DB_HOST) {
      console.warn(
@@ -15,11 +15,11 @@ if (variabiliMancanti.length > 0 && !process.env.DB_HOST) {
 
 const sequelize = new Sequelize(
      process.env.DB_NAME || 'music_analyzer',
-     process.env.DB_USER || 'misic_db',
+     process.env.DB_USER || 'music_db',
      process.env.DB_PASSWORD || 'postgres',
      {
-          host: process.env.DB_PORT || 'localhost',
-          port: parseInt(process.env.DB_PORT || '5432'),
+          host: process.env.DB_HOST || 'localhost',
+          port: parseInt(process.env.DB_PORT || '5432', 10),
           dialect: 'postgres',
           logging: process.env.NODE_ENV === 'development' ? console.log : false,
           pool: {
