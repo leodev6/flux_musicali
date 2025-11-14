@@ -1,3 +1,5 @@
+import { StatisticsObserver } from './observers/StastisticsObserver';
+import { StatisticService } from './services/StatisticService';
 import { EventController } from './controllers/EventController';
 import express, { Express } from 'express';
 import cors from 'cors';
@@ -8,6 +10,7 @@ import { EventProcessingService } from './services/EventProcessingService';
 import { EventSubject } from './observers/EventSubject';
 import { createRoutes } from './routes';
 import StatatisticRepository from './repositories/StatistiqueRepository';
+import { StatatisticsController } from './controllers';
 
 dotenv.config();
 const app: Express = express();
@@ -39,18 +42,21 @@ function initializaServices(){
 
      //Subject
      const eventSubject = new EventSubject();
+     const statisticService = new StatisticService(musicEventRepository);
 
      //Service
      const eventProcessingService = new EventProcessingService(musicEventRepository, eventSubject);
 
      //Observers
-     //eventSubject.attach();
+     const statisticsObserver = new StatisticsObserver(statisticService, statisticRepository);
+     eventSubject.attach(statisticsObserver);
 
      //Controller 
      const eventController = new EventController(eventProcessingService);
+     const statisticsController = new StatatisticsController(statisticService, musicEventRepository);
 
      //Routes
-     const routes = createRoutes(eventController);
+     const routes = createRoutes(eventController, statisticsController);
      app.use('/api', routes);
 
      console.log('Inizializzazione del servizion corretto.')
