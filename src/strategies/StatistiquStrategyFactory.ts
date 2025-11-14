@@ -13,4 +13,14 @@ export class StatisticsStrategyFactory {
      static getStrategy(type: string): IStatisticsStrategy | null {
           return this.strategies.get(type) || null;
      }
+
+     static getAllStrategies(): IStatisticsStrategy[]{
+          return Array.from(this.strategies.values());
+     }
+
+     static registerStrategy(type: string, strategy: IStatisticsStrategy): void {
+          this.strategies.set(type, strategy);
+     }
 }
+
+export default StatisticsStrategyFactory;
