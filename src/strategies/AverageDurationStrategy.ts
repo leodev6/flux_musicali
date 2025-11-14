@@ -7,8 +7,27 @@ export class AverageDurationStrategy implements IStatisticsStrategy {
           return 'durata_media'; 
      } 
      
-      calculate(events: MusicEvent[]): Promise<StatisticsResult> {
-          throw new Error("Method not implemented.");
+     async calculate(events: MusicEvent[]): Promise<StatisticsResult> {
+          if (events.length === 0) {
+               return {
+                    type: this.getType(),
+                    value: 0,
+                    metadata: { message: 'Nessun evento disponibile'},
+               };
+          }
+
+          const totalDuration = events.reduce((sum, event) => sum + event.duration , 0);
+          const averageDuration = totalDuration / events.length;
+
+          return {
+               type: this.getType(),
+               value: Math.round(averageDuration),
+               metadata: {
+                    totalDuration,
+                    eventCount: events.length,
+                    unit: 'seconds',
+               },
+          };
      }
 }
 
