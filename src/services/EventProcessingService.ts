@@ -2,6 +2,7 @@ import { Subject, Observable } from 'rxjs';
 import { MusicEvent } from '../models/MusicEvent';
 import MusicEventRepository from '../repositories/MusicEventRepository';
 import EventSubject from '../observers/EventSubject';
+import { timeStamp } from 'console';
 
 
 
@@ -54,8 +55,18 @@ export class EventProcessingService {
      }
 
 
-     private validateEventData(datiEvento: MusicEventInput): void {
+     private validateEventData(eventData: MusicEventInput): void {
+          if (!eventData.userId || !eventData.trackId || !eventData.artist) {
+               throw new Error('Campi obligatori mancanti: userId, trackId, artist');
+          }
 
+          if (typeof eventData.duration !== 'number' || eventData.duration <= 0) {
+               throw new Error('La durata deve essere un possitivo superiore a zero');
+          }
+
+          if (!eventData.timestamp || isNaN(Date.parse(eventData.timestamp))) {
+               throw new Error('Formato timetemp non valido');
+          }
      }
 }
 
