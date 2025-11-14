@@ -40,11 +40,9 @@ function initializaServices(){
      const musicEventRepository = new MusicEventRepository();
      const statisticRepository = new StatatisticRepository();
 
-     //Subject
+     //Service
      const eventSubject = new EventSubject();
      const statisticService = new StatisticService(musicEventRepository);
-
-     //Service
      const eventProcessingService = new EventProcessingService(musicEventRepository, eventSubject);
 
      //Observers
@@ -60,8 +58,6 @@ function initializaServices(){
      app.use('/api', routes);
 
      console.log('Inizializzazione del servizion corretto.')
-
-
 }
 
 
@@ -71,12 +67,12 @@ async function startServer(): Promise<void> {
           initializaServices();
 
           app.listen(PORT, () => {
-               console.log(`Server is running on port ${PORT}`);
-               console.log(`API endpoint available at http:localhost:${PORT}/api`);
+               console.log(`Il server è in esecuzione sulla porta ${PORT}`);
+               console.log(`API endpoint disponibile su http:localhost:${PORT}/api`);
                console.log(`Health check:  http:localhost:${PORT}/api/health`);
           })
      } catch (error) {
-          console.log('Failled to start server', error);
+          console.log('Impossibile avviare il server', error);
           process.exit(1)
      }
 }

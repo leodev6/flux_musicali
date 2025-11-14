@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { EventProcessingService } from "../services/EventProcessingService";
 
-export class EventController  {
+export class EventController {
      private eventProcessingService: EventProcessingService;
 
      constructor(eventProcessingService: EventProcessingService) {
@@ -19,7 +19,7 @@ export class EventController  {
                res.status(401).json({
                     success: false,
                     error: error.message || 'Errore durante la creazione parit',
-               }); 
+               });
           }
      }
 
@@ -49,4 +49,4 @@ export class EventController  {
      }
 }
 
-export default  EventController;
+export default EventController;
