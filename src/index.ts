@@ -7,6 +7,7 @@ import { MusicEventRepository } from './repositories/MusicEventRepository';
 import { EventProcessingService } from './services/EventProcessingService';
 import { EventSubject } from './observers/EventSubject';
 import { createRoutes } from './routes';
+import StatatisticRepository from './repositories/StatistiqueRepository';
 
 dotenv.config();
 const app: Express = express();
@@ -34,7 +35,7 @@ async function inizializeDatabase(): Promise<void> {
 function initializaServices(){
      //Ripository
      const musicEventRepository = new MusicEventRepository();
-     //const statisticRepository = new StatisticRepository();
+     const statisticRepository = new StatatisticRepository();
 
      //Subject
      const eventSubject = new EventSubject();

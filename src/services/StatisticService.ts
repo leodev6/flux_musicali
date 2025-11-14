@@ -29,4 +29,8 @@ export class StatisticService {
           const eventsToProcess = events || (await this.musicEventRepository.findAll());
           return await strategy.calculate(eventsToProcess);
      }
+
+     async getMostPlayedArtist(events?: MusicEvent[]): Promise<StatisticsResult | null>{
+          return await this.calculeteStatistics('artista_più_suonato', events);
+     }
 }

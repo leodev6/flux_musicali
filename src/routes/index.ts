@@ -1,4 +1,3 @@
-
 import { Router } from "express";
 import { EventController } from "../controllers/EventController";
 import { createEventRoutes } from "./eventRoute";
