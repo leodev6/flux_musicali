@@ -1,28 +1,43 @@
 import { IRepository } from './IRepository';
-import EventoMusicale, { MusicEvent, MusicEventAttributes, MusicEventCreationAttributes } from '../models/MusicEvent';
+import MusicEvent, { MusicEventAttributes, MusicEventCreationAttributes } from '../models/MusicEvent';
 import { Op } from 'sequelize';
 
 
 
-export class MusicEventRepository implements IRepository<EventoMusicale> {
-     async create(entita: Partial<MusicEventCreationAttributes>): Promise<EventoMusicale> {
-          return await EventoMusicale.create(entita as MusicEventCreationAttributes);
+export class MusicEventRepository implements IRepository<MusicEvent> {
+     async create(entita: Partial<MusicEventCreationAttributes>): Promise<MusicEvent> {
+          return await MusicEvent.create(entita as MusicEventCreationAttributes);
      }
 
-     async findById(id: number): Promise<EventoMusicale | null> {
-          return await EventoMusicale.findByPk(id);
+     async findById(id: number): Promise<MusicEvent | null> {
+          return await MusicEvent.findByPk(id);
      }
 
 
-     findAll(): Promise<EventoMusicale[]> {
-          throw new Error("Method not implemented.");
+     async findAll(): Promise<MusicEvent[]> {
+          return await MusicEvent.findAll();
      }
 
-     update(id: number, entita: EventoMusicale): Promise<any> {
-          throw new Error("Method not implemented.");
+     async update(id: number, entita: Partial <MusicEventAttributes>): Promise<MusicEvent | null> {
+          const musicEvent = await MusicEvent.findByPk(id);
+          if (!musicEvent) {
+               return null;
+          }
+          await musicEvent.update(entita);
+          return musicEvent;
      }
-     delete(id: number): Promise<boolean> {
-          throw new Error("Method not implemented.");
+
+     async delete(id: number): Promise<boolean> {
+          const deleted = await MusicEvent.destroy({where: {id}});
+          return deleted > 0;
+     }
+
+     async findByUserId(userId: string): Promise<MusicEvent[]> {
+          return await MusicEvent.findAll({ where: { userId }});
+     }
+
+     async findByArtist(artist: string): Promise<MusicEvent[]> {
+          return await MusicEvent.findAll({ where: { artist }})
      }
      
      async findByDateRange(starDate: Date, endDate: Date): Promise<MusicEvent[]> {
