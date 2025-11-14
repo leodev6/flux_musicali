@@ -1,6 +1,7 @@
 import { StatisticAttributes, StatisticCreationAttributes } from './../models/Statistic';
 import { IRepository } from "./IRepository";
 import Statistic from "../models/Statistic";
+import { Op } from 'sequelize';
 
 export class StatatisticRepository implements IRepository<Statistic> {
      async create(entita: Partial<StatisticCreationAttributes>): Promise<Statistic> {
@@ -43,5 +44,21 @@ export class StatatisticRepository implements IRepository<Statistic> {
           });
      }
 
+     async findByDateRange(startDate: Date, endDate: Date): Promise<Statistic[]>{
+          return await Statistic.findAll({
+               where: {
+                    date: {
+                         [Op.between]: [startDate, endDate],
+                    },
+               },
+          });
+     }
+
+     async findLatestByType(type: string): Promise<Statistic | null> {
+          return await Statistic.findOne({
+               where: { type },
+               order: [['date', 'DESC']],
+          });
+     }
 }
 export default StatatisticRepository;
