@@ -54,6 +54,22 @@ export class EventProcessingService {
           return musicEvent;
      }
 
+     async elaboraEvento(events: MusicEventInput[]): Promise<MusicEvent[]> {
+          const processedEvents: MusicEvent[] = [];
+
+          for (const eventData of events) {
+               try {
+                    const event = await this.processEvent(eventData);
+                    processedEvents.push(event);
+               } catch (error) {
+                    console.error('Errore nell\'elaborazione dell\'evento:', error);
+                    // Continua a elaborare altri eventi
+               }
+          }
+
+          return processedEvents;
+     }
+
 
      private validateEventData(eventData: MusicEventInput): void {
           if (!eventData.userId || !eventData.trackId || !eventData.artist) {
