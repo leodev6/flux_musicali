@@ -1,6 +1,6 @@
 import { MusicEventRepository } from './../repositories/MusicEventRepository';
 import MusicEvent from '../models/MusicEvent';
-import { StatisticsResult} from '../strategies/IStatistiqueStrategy';
+import { StatisticsResult } from '../strategies/IStatistiqueStrategy';
 import { StatisticsStrategyFactory } from '../strategies/StatistiquStrategyFactory';
 
 
@@ -30,7 +30,29 @@ export class StatisticService {
           return await strategy.calculate(eventsToProcess);
      }
 
-     async getMostPlayedArtist(events?: MusicEvent[]): Promise<StatisticsResult | null>{
+     async getMostPlayedArtist(events?: MusicEvent[]): Promise<StatisticsResult | null> {
           return await this.calculeteStatistics('artista_più_suonato', events);
+     }
+
+     async getAverageDuration(events?: MusicEvent[]): Promise<StatisticsResult | null> {
+          return await this.calculeteStatistics('durata_media', events);
+     }
+
+     async getDailyTrends(events?: MusicEvent[]): Promise<StatisticsResult | null> {
+          return await this.calculeteStatistics('tendenza_giornaliera');
+     }
+
+     async getStatisticsByDate(date: Date): Promise<{
+          mostPlayedArtist: StatisticsResult | null;
+          averageDuration: StatisticsResult | null;
+          dailyTrend: StatisticsResult | null;
+     }> {
+          const dayEvents = await this.musicEventRepository.findByDate(date);
+
+          return {
+               mostPlayedArtist: await this.getMostPlayedArtist(dayEvents),
+               averageDuration: await this.getAverageDuration(dayEvents),
+               dailyTrend: await this.getDailyTrends(dayEvents),
+          };
      }
 }
