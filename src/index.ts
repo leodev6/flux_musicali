@@ -14,12 +14,12 @@ import { StatatisticsController } from './controllers';
 
 dotenv.config();
 const app: Express = express();
-const PORT = process.env.PORT  || 3000;
+const PORT = process.env.PORT || 3000;
 
 //Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 
 //Inizializzazione la connexìzione al database
@@ -27,6 +27,8 @@ async function inizializeDatabase(): Promise<void> {
      try {
           await sequelize.authenticate();
           console.log('Connessione al database riuscita!');
+          console.log('Modelli di database sincronizzati.');
+          await sequelize.sync({ alter: true });
      } catch (error) {
           console.error('Errore dell\'inizializzazione del database', error);
           process.exit(1);
@@ -35,7 +37,7 @@ async function inizializeDatabase(): Promise<void> {
 
 
 //Inizializzazione dei servizi e le dipendenze
-function initializaServices(){
+function initializaServices() {
      //Ripository
      const musicEventRepository = new MusicEventRepository();
      const statisticRepository = new StatatisticRepository();
@@ -57,8 +59,18 @@ function initializaServices(){
      const routes = createRoutes(eventController, statisticsController);
      app.use('/api', routes);
 
-     console.log('Inizializzazione del servizion corretto.')
+     console.log('Inizializzazione del servizio corretto.')
 }
+
+//Errore nella gestione del middleware
+app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+     console.error('Error: ', err);
+     res.status(500).json({
+          success: false,
+          error: 'Errore interno al server',
+          message: process.env.NODE_ENV === 'development' ? err.message : undefined,
+     });
+});
 
 
 async function startServer(): Promise<void> {
@@ -68,8 +80,8 @@ async function startServer(): Promise<void> {
 
           app.listen(PORT, () => {
                console.log(`Il server è in esecuzione sulla porta ${PORT}`);
-               console.log(`API endpoint disponibile su http:localhost:${PORT}/api`);
-               console.log(`Health check:  http:localhost:${PORT}/api/health`);
+               console.log(`API endpoint disponibile su: http://localhost:${PORT}/api`);
+               console.log(`Health check:  http://localhost:${PORT}/api/health`);
           })
      } catch (error) {
           console.log('Impossibile avviare il server', error);
