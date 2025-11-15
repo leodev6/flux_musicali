@@ -9,6 +9,7 @@ export function createRoutes(eventController: EventController, statisticsControl
 
      router.use('/events', createEventRoutes(eventController));
      router.use('/statistics', createStatisticsRoutes(statisticsController));
+     
      router.get('/health', (req, res) => {
           res.json({
                status: 'ok',

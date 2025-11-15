@@ -4,9 +4,21 @@ import { StatatisticsController } from "../controllers/StatisticsController";
 export function createStatisticsRoutes(statatisticsController: StatatisticsController): Router {
      const router = Router();
 
-     router.get('/artista_piu_suonato', (req, res) => {
-          statatisticsController.getMostPlayedArtist(req, res);
-     });
+     router.get('/artista_piu_suonato', (req, res) =>
+          statatisticsController.getMostPlayedArtist(req, res)
+     );
+
+     router.get('/durata_media', (req, res) =>
+          statatisticsController.getAverageDuration(req, res)
+     );
+
+     router.get('/tendenza_giornaliera', (req, res) =>
+          statatisticsController.getDailyTrends(req, res)
+     );
+
+     router.get('/all', (req, res) =>
+          statatisticsController.getAllStatistics(req, res)
+     );
 
      return router;
 }
