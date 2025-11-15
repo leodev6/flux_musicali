@@ -6,6 +6,7 @@ import { Op } from 'sequelize';
 
 export class MusicEventRepository implements IRepository<MusicEvent> {
      async create(entita: Partial<MusicEventCreationAttributes>): Promise<MusicEvent> {
+          // Sequelize inclut automatiquement toutes les propriétés définies dans l'objet
           return await MusicEvent.create(entita as MusicEventCreationAttributes);
      }
 

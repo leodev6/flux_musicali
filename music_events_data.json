@@ -1,0 +1,2002 @@
+[
+  {
+    "userId": "u1",
+    "trackId": "t001",
+    "artist": "Ultimo",
+    "duration": 210,
+    "timestamp": "2025-11-01T10:12:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t002",
+    "artist": "Sfera Ebbasta",
+    "duration": 185,
+    "timestamp": "2025-11-01T10:45:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t003",
+    "artist": "Mahmood",
+    "duration": 200,
+    "timestamp": "2025-11-01T11:05:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t004",
+    "artist": "Laura Pausini",
+    "duration": 240,
+    "timestamp": "2025-11-01T11:22:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t005",
+    "artist": "Eros Ramazzotti",
+    "duration": 230,
+    "timestamp": "2025-11-01T11:48:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t006",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-01T12:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u12",
+    "trackId": "t007",
+    "artist": "Tiziano Ferro",
+    "duration": 260,
+    "timestamp": "2025-11-01T12:40:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t008",
+    "artist": "Elisa",
+    "duration": 198,
+    "timestamp": "2025-11-01T13:02:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t009",
+    "artist": "Annalisa",
+    "duration": 175,
+    "timestamp": "2025-11-01T13:20:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t010",
+    "artist": "Blanco",
+    "duration": 190,
+    "timestamp": "2025-11-01T13:55:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t011",
+    "artist": "Fedez",
+    "duration": 165,
+    "timestamp": "2025-11-02T09:20:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u11",
+    "trackId": "t012",
+    "artist": "Ghali",
+    "duration": 180,
+    "timestamp": "2025-11-02T09:48:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t013",
+    "artist": "Irama",
+    "duration": 210,
+    "timestamp": "2025-11-02T10:14:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u14",
+    "trackId": "t014",
+    "artist": "Rkomi",
+    "duration": 200,
+    "timestamp": "2025-11-02T10:40:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t015",
+    "artist": "Coez",
+    "duration": 230,
+    "timestamp": "2025-11-02T10:55:00Z",
+    "genre": "Indie",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u16",
+    "trackId": "t016",
+    "artist": "Baby K",
+    "duration": 150,
+    "timestamp": "2025-11-02T11:18:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t017",
+    "artist": "Marco Mengoni",
+    "duration": 245,
+    "timestamp": "2025-11-02T11:40:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t018",
+    "artist": "Capo Plaza",
+    "duration": 170,
+    "timestamp": "2025-11-02T11:59:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u20",
+    "trackId": "t019",
+    "artist": "Negramaro",
+    "duration": 260,
+    "timestamp": "2025-11-02T12:15:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t020",
+    "artist": "Jovanotti",
+    "duration": 215,
+    "timestamp": "2025-11-02T12:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t021",
+    "artist": "Ultimo",
+    "duration": 225,
+    "timestamp": "2025-11-03T09:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t022",
+    "artist": "Sfera Ebbasta",
+    "duration": 190,
+    "timestamp": "2025-11-03T09:32:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u13",
+    "trackId": "t023",
+    "artist": "Mahmood",
+    "duration": 185,
+    "timestamp": "2025-11-03T09:48:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u17",
+    "trackId": "t024",
+    "artist": "Elisa",
+    "duration": 225,
+    "timestamp": "2025-11-03T10:20:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t025",
+    "artist": "Ligabue",
+    "duration": 240,
+    "timestamp": "2025-11-03T10:48:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t026",
+    "artist": "Annalisa",
+    "duration": 165,
+    "timestamp": "2025-11-03T11:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u12",
+    "trackId": "t027",
+    "artist": "Fedez",
+    "duration": 175,
+    "timestamp": "2025-11-03T11:19:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t028",
+    "artist": "Rkomi",
+    "duration": 158,
+    "timestamp": "2025-11-03T11:33:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u18",
+    "trackId": "t029",
+    "artist": "Blanco",
+    "duration": 198,
+    "timestamp": "2025-11-03T12:05:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u11",
+    "trackId": "t030",
+    "artist": "Marco Mengoni",
+    "duration": 245,
+    "timestamp": "2025-11-03T12:20:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u14",
+    "trackId": "t031",
+    "artist": "Capo Plaza",
+    "duration": 160,
+    "timestamp": "2025-11-04T09:00:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t032",
+    "artist": "Lucio Battisti",
+    "duration": 230,
+    "timestamp": "2025-11-04T09:33:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t033",
+    "artist": "Eros Ramazzotti",
+    "duration": 240,
+    "timestamp": "2025-11-04T10:02:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u16",
+    "trackId": "t034",
+    "artist": "Laura Pausini",
+    "duration": 205,
+    "timestamp": "2025-11-04T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t035",
+    "artist": "Elisa",
+    "duration": 170,
+    "timestamp": "2025-11-04T10:48:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u19",
+    "trackId": "t036",
+    "artist": "Ghali",
+    "duration": 200,
+    "timestamp": "2025-11-04T11:05:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t037",
+    "artist": "Ultimo",
+    "duration": 220,
+    "timestamp": "2025-11-04T11:22:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t038",
+    "artist": "Negramaro",
+    "duration": 230,
+    "timestamp": "2025-11-04T11:45:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t039",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-04T12:00:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t040",
+    "artist": "Sfera Ebbasta",
+    "duration": 185,
+    "timestamp": "2025-11-04T12:22:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u20",
+    "trackId": "t041",
+    "artist": "Mahmood",
+    "duration": 200,
+    "timestamp": "2025-11-05T08:50:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u17",
+    "trackId": "t042",
+    "artist": "Annalisa",
+    "duration": 175,
+    "timestamp": "2025-11-05T09:12:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t043",
+    "artist": "Fedez",
+    "duration": 160,
+    "timestamp": "2025-11-05T09:30:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t044",
+    "artist": "Elisa",
+    "duration": 240,
+    "timestamp": "2025-11-05T09:55:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t045",
+    "artist": "Marco Mengoni",
+    "duration": 245,
+    "timestamp": "2025-11-05T10:20:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u12",
+    "trackId": "t046",
+    "artist": "Capo Plaza",
+    "duration": 170,
+    "timestamp": "2025-11-05T10:33:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u14",
+    "trackId": "t047",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-05T10:55:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t048",
+    "artist": "Tiziano Ferro",
+    "duration": 250,
+    "timestamp": "2025-11-05T11:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t049",
+    "artist": "Ghali",
+    "duration": 190,
+    "timestamp": "2025-11-05T11:50:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t050",
+    "artist": "Rkomi",
+    "duration": 160,
+    "timestamp": "2025-11-05T12:10:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t051",
+    "artist": "Ultimo",
+    "duration": 210,
+    "timestamp": "2025-11-06T08:50:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t052",
+    "artist": "Mahmood",
+    "duration": 198,
+    "timestamp": "2025-11-06T09:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u18",
+    "trackId": "t053",
+    "artist": "Laura Pausini",
+    "duration": 230,
+    "timestamp": "2025-11-06T09:25:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t054",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-06T09:48:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t055",
+    "artist": "Elisa",
+    "duration": 200,
+    "timestamp": "2025-11-06T10:12:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u20",
+    "trackId": "t056",
+    "artist": "Sfera Ebbasta",
+    "duration": 185,
+    "timestamp": "2025-11-06T10:30:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t057",
+    "artist": "Fedez",
+    "duration": 175,
+    "timestamp": "2025-11-06T10:55:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u12",
+    "trackId": "t058",
+    "artist": "Annalisa",
+    "duration": 165,
+    "timestamp": "2025-11-06T11:05:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t059",
+    "artist": "Blanco",
+    "duration": 190,
+    "timestamp": "2025-11-06T11:44:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t060",
+    "artist": "Jovanotti",
+    "duration": 210,
+    "timestamp": "2025-11-06T12:01:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t061",
+    "artist": "Ultimo",
+    "duration": 205,
+    "timestamp": "2025-11-07T08:55:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t062",
+    "artist": "Fedez",
+    "duration": 188,
+    "timestamp": "2025-11-07T09:10:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t063",
+    "artist": "Elisa",
+    "duration": 220,
+    "timestamp": "2025-11-07T09:40:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t064",
+    "artist": "Negramaro",
+    "duration": 240,
+    "timestamp": "2025-11-07T10:00:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t065",
+    "artist": "Mahmood",
+    "duration": 190,
+    "timestamp": "2025-11-07T10:12:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u13",
+    "trackId": "t066",
+    "artist": "Tiziano Ferro",
+    "duration": 260,
+    "timestamp": "2025-11-07T10:25:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t067",
+    "artist": "Blanco",
+    "duration": 170,
+    "timestamp": "2025-11-07T10:50:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t068",
+    "artist": "Sfera Ebbasta",
+    "duration": 200,
+    "timestamp": "2025-11-07T11:10:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t069",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-07T11:30:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u20",
+    "trackId": "t070",
+    "artist": "Annalisa",
+    "duration": 175,
+    "timestamp": "2025-11-07T11:55:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u11",
+    "trackId": "t071",
+    "artist": "Ultimo",
+    "duration": 210,
+    "timestamp": "2025-11-08T09:05:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u14",
+    "trackId": "t072",
+    "artist": "Baby K",
+    "duration": 160,
+    "timestamp": "2025-11-08T09:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t073",
+    "artist": "Marco Mengoni",
+    "duration": 240,
+    "timestamp": "2025-11-08T10:02:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u19",
+    "trackId": "t074",
+    "artist": "Mahmood",
+    "duration": 190,
+    "timestamp": "2025-11-08T10:20:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t075",
+    "artist": "Ligabue",
+    "duration": 220,
+    "timestamp": "2025-11-08T10:48:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t076",
+    "artist": "Elisa",
+    "duration": 230,
+    "timestamp": "2025-11-08T11:03:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t077",
+    "artist": "Ghali",
+    "duration": 180,
+    "timestamp": "2025-11-08T11:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u12",
+    "trackId": "t078",
+    "artist": "Fedez",
+    "duration": 175,
+    "timestamp": "2025-11-08T11:45:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t079",
+    "artist": "Jovanotti",
+    "duration": 210,
+    "timestamp": "2025-11-08T12:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u17",
+    "trackId": "t080",
+    "artist": "Rkomi",
+    "duration": 165,
+    "timestamp": "2025-11-08T12:22:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t081",
+    "artist": "Capo Plaza",
+    "duration": 175,
+    "timestamp": "2025-11-09T09:15:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t082",
+    "artist": "Ultimo",
+    "duration": 220,
+    "timestamp": "2025-11-09T09:40:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u15",
+    "trackId": "t083",
+    "artist": "Fedez",
+    "duration": 185,
+    "timestamp": "2025-11-09T10:10:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t084",
+    "artist": "Laura Pausini",
+    "duration": 240,
+    "timestamp": "2025-11-09T10:40:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u20",
+    "trackId": "t085",
+    "artist": "Mahmood",
+    "duration": 200,
+    "timestamp": "2025-11-09T11:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t086",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-09T11:22:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u13",
+    "trackId": "t087",
+    "artist": "Ghali",
+    "duration": 190,
+    "timestamp": "2025-11-09T11:48:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t088",
+    "artist": "Annalisa",
+    "duration": 165,
+    "timestamp": "2025-11-09T12:05:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t089",
+    "artist": "Marco Mengoni",
+    "duration": 245,
+    "timestamp": "2025-11-09T12:25:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t090",
+    "artist": "Elisa",
+    "duration": 200,
+    "timestamp": "2025-11-09T12:48:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u11",
+    "trackId": "t091",
+    "artist": "Sfera Ebbasta",
+    "duration": 185,
+    "timestamp": "2025-11-10T08:40:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u14",
+    "trackId": "t092",
+    "artist": "Mahmood",
+    "duration": 200,
+    "timestamp": "2025-11-10T09:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t093",
+    "artist": "Ultimo",
+    "duration": 210,
+    "timestamp": "2025-11-10T09:20:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t094",
+    "artist": "Ligabue",
+    "duration": 215,
+    "timestamp": "2025-11-10T09:45:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t095",
+    "artist": "Elisa",
+    "duration": 198,
+    "timestamp": "2025-11-10T10:05:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u12",
+    "trackId": "t096",
+    "artist": "Marco Mengoni",
+    "duration": 245,
+    "timestamp": "2025-11-10T10:25:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t097",
+    "artist": "Annalisa",
+    "duration": 175,
+    "timestamp": "2025-11-10T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t098",
+    "artist": "Fedez",
+    "duration": 160,
+    "timestamp": "2025-11-10T11:10:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u18",
+    "trackId": "t099",
+    "artist": "Negramaro",
+    "duration": 260,
+    "timestamp": "2025-11-10T11:33:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u20",
+    "trackId": "t100",
+    "artist": "Blanco",
+    "duration": 190,
+    "timestamp": "2025-11-10T11:58:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t801",
+    "artist": "Ultimo",
+    "duration": 180,
+    "timestamp": "2025-11-01T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t802",
+    "artist": "Sfera Ebbasta",
+    "duration": 240,
+    "timestamp": "2025-11-01T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t803",
+    "artist": "Mahmood",
+    "duration": 200,
+    "timestamp": "2025-11-01T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t804",
+    "artist": "Laura Pausini",
+    "duration": 220,
+    "timestamp": "2025-11-01T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t805",
+    "artist": "Ligabue",
+    "duration": 260,
+    "timestamp": "2025-11-01T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t806",
+    "artist": "Fedez",
+    "duration": 210,
+    "timestamp": "2025-11-01T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t807",
+    "artist": "Elisa",
+    "duration": 190,
+    "timestamp": "2025-11-01T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t808",
+    "artist": "Marco Mengoni",
+    "duration": 230,
+    "timestamp": "2025-11-01T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t809",
+    "artist": "Negramaro",
+    "duration": 250,
+    "timestamp": "2025-11-01T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t810",
+    "artist": "Baby K",
+    "duration": 170,
+    "timestamp": "2025-11-01T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t811",
+    "artist": "Ultimo",
+    "duration": 185,
+    "timestamp": "2025-11-02T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t812",
+    "artist": "Sfera Ebbasta",
+    "duration": 245,
+    "timestamp": "2025-11-02T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t813",
+    "artist": "Mahmood",
+    "duration": 205,
+    "timestamp": "2025-11-02T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t814",
+    "artist": "Laura Pausini",
+    "duration": 225,
+    "timestamp": "2025-11-02T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t815",
+    "artist": "Ligabue",
+    "duration": 265,
+    "timestamp": "2025-11-02T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t816",
+    "artist": "Fedez",
+    "duration": 215,
+    "timestamp": "2025-11-02T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t817",
+    "artist": "Elisa",
+    "duration": 195,
+    "timestamp": "2025-11-02T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t818",
+    "artist": "Marco Mengoni",
+    "duration": 235,
+    "timestamp": "2025-11-02T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t819",
+    "artist": "Negramaro",
+    "duration": 255,
+    "timestamp": "2025-11-02T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t820",
+    "artist": "Baby K",
+    "duration": 175,
+    "timestamp": "2025-11-02T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t821",
+    "artist": "Ultimo",
+    "duration": 190,
+    "timestamp": "2025-11-03T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t822",
+    "artist": "Sfera Ebbasta",
+    "duration": 250,
+    "timestamp": "2025-11-03T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t823",
+    "artist": "Mahmood",
+    "duration": 210,
+    "timestamp": "2025-11-03T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t824",
+    "artist": "Laura Pausini",
+    "duration": 230,
+    "timestamp": "2025-11-03T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t825",
+    "artist": "Ligabue",
+    "duration": 270,
+    "timestamp": "2025-11-03T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t826",
+    "artist": "Fedez",
+    "duration": 220,
+    "timestamp": "2025-11-03T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t827",
+    "artist": "Elisa",
+    "duration": 200,
+    "timestamp": "2025-11-03T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t828",
+    "artist": "Marco Mengoni",
+    "duration": 240,
+    "timestamp": "2025-11-03T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t829",
+    "artist": "Negramaro",
+    "duration": 260,
+    "timestamp": "2025-11-03T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t830",
+    "artist": "Baby K",
+    "duration": 180,
+    "timestamp": "2025-11-03T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t831",
+    "artist": "Ultimo",
+    "duration": 175,
+    "timestamp": "2025-11-04T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t832",
+    "artist": "Sfera Ebbasta",
+    "duration": 235,
+    "timestamp": "2025-11-04T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t833",
+    "artist": "Mahmood",
+    "duration": 195,
+    "timestamp": "2025-11-04T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t834",
+    "artist": "Laura Pausini",
+    "duration": 215,
+    "timestamp": "2025-11-04T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t835",
+    "artist": "Ligabue",
+    "duration": 255,
+    "timestamp": "2025-11-04T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t836",
+    "artist": "Fedez",
+    "duration": 205,
+    "timestamp": "2025-11-04T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t837",
+    "artist": "Elisa",
+    "duration": 185,
+    "timestamp": "2025-11-04T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t838",
+    "artist": "Marco Mengoni",
+    "duration": 225,
+    "timestamp": "2025-11-04T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t839",
+    "artist": "Negramaro",
+    "duration": 245,
+    "timestamp": "2025-11-04T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t840",
+    "artist": "Baby K",
+    "duration": 165,
+    "timestamp": "2025-11-04T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t841",
+    "artist": "Ultimo",
+    "duration": 188,
+    "timestamp": "2025-11-05T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t842",
+    "artist": "Sfera Ebbasta",
+    "duration": 248,
+    "timestamp": "2025-11-05T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t843",
+    "artist": "Mahmood",
+    "duration": 208,
+    "timestamp": "2025-11-05T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t844",
+    "artist": "Laura Pausini",
+    "duration": 228,
+    "timestamp": "2025-11-05T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t845",
+    "artist": "Ligabue",
+    "duration": 268,
+    "timestamp": "2025-11-05T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t846",
+    "artist": "Fedez",
+    "duration": 218,
+    "timestamp": "2025-11-05T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t847",
+    "artist": "Elisa",
+    "duration": 198,
+    "timestamp": "2025-11-05T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t848",
+    "artist": "Marco Mengoni",
+    "duration": 238,
+    "timestamp": "2025-11-05T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t849",
+    "artist": "Negramaro",
+    "duration": 258,
+    "timestamp": "2025-11-05T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t850",
+    "artist": "Baby K",
+    "duration": 178,
+    "timestamp": "2025-11-05T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t851",
+    "artist": "Ultimo",
+    "duration": 192,
+    "timestamp": "2025-11-06T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t852",
+    "artist": "Sfera Ebbasta",
+    "duration": 252,
+    "timestamp": "2025-11-06T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t853",
+    "artist": "Mahmood",
+    "duration": 212,
+    "timestamp": "2025-11-06T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t854",
+    "artist": "Laura Pausini",
+    "duration": 232,
+    "timestamp": "2025-11-06T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t855",
+    "artist": "Ligabue",
+    "duration": 272,
+    "timestamp": "2025-11-06T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t856",
+    "artist": "Fedez",
+    "duration": 222,
+    "timestamp": "2025-11-06T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t857",
+    "artist": "Elisa",
+    "duration": 202,
+    "timestamp": "2025-11-06T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t858",
+    "artist": "Marco Mengoni",
+    "duration": 242,
+    "timestamp": "2025-11-06T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t859",
+    "artist": "Negramaro",
+    "duration": 262,
+    "timestamp": "2025-11-06T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t860",
+    "artist": "Baby K",
+    "duration": 182,
+    "timestamp": "2025-11-06T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t861",
+    "artist": "Ultimo",
+    "duration": 176,
+    "timestamp": "2025-11-07T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t862",
+    "artist": "Sfera Ebbasta",
+    "duration": 236,
+    "timestamp": "2025-11-07T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t863",
+    "artist": "Mahmood",
+    "duration": 196,
+    "timestamp": "2025-11-07T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t864",
+    "artist": "Laura Pausini",
+    "duration": 216,
+    "timestamp": "2025-11-07T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t865",
+    "artist": "Ligabue",
+    "duration": 256,
+    "timestamp": "2025-11-07T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t866",
+    "artist": "Fedez",
+    "duration": 206,
+    "timestamp": "2025-11-07T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t867",
+    "artist": "Elisa",
+    "duration": 186,
+    "timestamp": "2025-11-07T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t868",
+    "artist": "Marco Mengoni",
+    "duration": 226,
+    "timestamp": "2025-11-07T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t869",
+    "artist": "Negramaro",
+    "duration": 246,
+    "timestamp": "2025-11-07T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t870",
+    "artist": "Baby K",
+    "duration": 166,
+    "timestamp": "2025-11-07T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t871",
+    "artist": "Ultimo",
+    "duration": 184,
+    "timestamp": "2025-11-08T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t872",
+    "artist": "Sfera Ebbasta",
+    "duration": 244,
+    "timestamp": "2025-11-08T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t873",
+    "artist": "Mahmood",
+    "duration": 204,
+    "timestamp": "2025-11-08T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t874",
+    "artist": "Laura Pausini",
+    "duration": 224,
+    "timestamp": "2025-11-08T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t875",
+    "artist": "Ligabue",
+    "duration": 264,
+    "timestamp": "2025-11-08T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t876",
+    "artist": "Fedez",
+    "duration": 214,
+    "timestamp": "2025-11-08T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t877",
+    "artist": "Elisa",
+    "duration": 194,
+    "timestamp": "2025-11-08T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t878",
+    "artist": "Marco Mengoni",
+    "duration": 234,
+    "timestamp": "2025-11-08T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t879",
+    "artist": "Negramaro",
+    "duration": 254,
+    "timestamp": "2025-11-08T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t880",
+    "artist": "Baby K",
+    "duration": 174,
+    "timestamp": "2025-11-08T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t881",
+    "artist": "Ultimo",
+    "duration": 196,
+    "timestamp": "2025-11-09T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t882",
+    "artist": "Sfera Ebbasta",
+    "duration": 256,
+    "timestamp": "2025-11-09T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t883",
+    "artist": "Mahmood",
+    "duration": 216,
+    "timestamp": "2025-11-09T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t884",
+    "artist": "Laura Pausini",
+    "duration": 236,
+    "timestamp": "2025-11-09T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t885",
+    "artist": "Ligabue",
+    "duration": 276,
+    "timestamp": "2025-11-09T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t886",
+    "artist": "Fedez",
+    "duration": 226,
+    "timestamp": "2025-11-09T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t887",
+    "artist": "Elisa",
+    "duration": 206,
+    "timestamp": "2025-11-09T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t888",
+    "artist": "Marco Mengoni",
+    "duration": 246,
+    "timestamp": "2025-11-09T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t889",
+    "artist": "Negramaro",
+    "duration": 266,
+    "timestamp": "2025-11-09T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t890",
+    "artist": "Baby K",
+    "duration": 186,
+    "timestamp": "2025-11-09T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u1",
+    "trackId": "t891",
+    "artist": "Ultimo",
+    "duration": 200,
+    "timestamp": "2025-11-10T10:00:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u2",
+    "trackId": "t892",
+    "artist": "Sfera Ebbasta",
+    "duration": 260,
+    "timestamp": "2025-11-10T10:05:00Z",
+    "genre": "Trap",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u3",
+    "trackId": "t893",
+    "artist": "Mahmood",
+    "duration": 220,
+    "timestamp": "2025-11-10T10:10:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u4",
+    "trackId": "t894",
+    "artist": "Laura Pausini",
+    "duration": 240,
+    "timestamp": "2025-11-10T10:15:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u5",
+    "trackId": "t895",
+    "artist": "Ligabue",
+    "duration": 280,
+    "timestamp": "2025-11-10T10:20:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u6",
+    "trackId": "t896",
+    "artist": "Fedez",
+    "duration": 230,
+    "timestamp": "2025-11-10T10:25:00Z",
+    "genre": "Rap",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u7",
+    "trackId": "t897",
+    "artist": "Elisa",
+    "duration": 210,
+    "timestamp": "2025-11-10T10:30:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  },
+  {
+    "userId": "u8",
+    "trackId": "t898",
+    "artist": "Marco Mengoni",
+    "duration": 250,
+    "timestamp": "2025-11-10T10:35:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "desktop"
+  },
+  {
+    "userId": "u9",
+    "trackId": "t899",
+    "artist": "Negramaro",
+    "duration": 270,
+    "timestamp": "2025-11-10T10:40:00Z",
+    "genre": "Rock",
+    "country": "IT",
+    "device": "tablet"
+  },
+  {
+    "userId": "u10",
+    "trackId": "t900",
+    "artist": "Baby K",
+    "duration": 190,
+    "timestamp": "2025-11-10T10:45:00Z",
+    "genre": "Pop",
+    "country": "IT",
+    "device": "mobile"
+  }
+]

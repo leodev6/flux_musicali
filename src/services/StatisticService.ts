@@ -39,7 +39,7 @@ export class StatisticService {
      }
 
      async getDailyTrends(events?: MusicEvent[]): Promise<StatisticsResult | null> {
-          return await this.calculeteStatistics('tendenza_giornaliera');
+          return await this.calculeteStatistics('tendenza_giornaliera', events);
      }
 
      async getPeakHours(events?: MusicEvent[]): Promise<StatisticsResult | null> {

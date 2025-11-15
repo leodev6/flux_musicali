@@ -1,5 +1,5 @@
 import { Subject, Observable } from 'rxjs';
-import { MusicEvent } from '../models/MusicEvent';
+import { MusicEvent, MusicEventCreationAttributes } from '../models/MusicEvent';
 import MusicEventRepository from '../repositories/MusicEventRepository';
 import EventSubject from '../observers/EventSubject';
 import { timeStamp } from 'console';
@@ -39,17 +39,28 @@ export class EventProcessingService {
           //Convalida i dati degli eventi
           this.validateEventData(eventData);
 
-          // Crea evento nel database
-          const musicEvent = await this.musicEventRepository.create({
+          // Debug: log des données reçues
+          console.log('Données reçues:', JSON.stringify(eventData, null, 2));
+
+          // Crea evento nel database - passer toutes les valeurs directement
+          const eventToCreate: MusicEventCreationAttributes = {
                userId: eventData.userId,
                trackId: eventData.trackId,
                artist: eventData.artist,
                duration: eventData.duration,
+               timestamp: new Date(eventData.timestamp),
                genre: eventData.genre,
                country: eventData.country,
                device: eventData.device,
-               timestamp: new Date(eventData.timestamp),
-          });
+          };
+
+          // Debug: log de l'objet créé
+          console.log('Objet à créer dans la DB:', JSON.stringify(eventToCreate, null, 2));
+
+          const musicEvent = await this.musicEventRepository.create(eventToCreate);
+          
+          // Debug: log de l'objet créé
+          console.log('Événement créé:', JSON.stringify(musicEvent.toJSON(), null, 2));
 
           // Emetti nel flusso RxJS
           this.eventStream$.next(musicEvent);

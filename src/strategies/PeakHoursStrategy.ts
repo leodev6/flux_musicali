@@ -12,7 +12,7 @@ export interface PeakHourData {
 
 export class PeakHoursStrategy implements IStatisticsStrategy {
      getType(): string {
-          return 'peak_hours';
+          return 'ore_di_punta';
      }
 
      async calculate(events: MusicEvent[]): Promise<StatisticsResult> {
