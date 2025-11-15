@@ -29,7 +29,7 @@ export class StatatisticsController {
           }
      }
 
-     async getAverageDuration(req: Request, res: Response): Promise<void>{
+     async getAverageDuration(req: Request, res: Response): Promise<void> {
           try {
                const date = req.query.date ? new Date(req.query.date as string) : new Date();
                const events = await this.musicEventRepository.findByDate(date);
@@ -65,6 +65,24 @@ export class StatatisticsController {
                     error: error.message || 'Errore durante il recupero delle tendenze giornaliere.'
                });
           }
+     }
+
+     async getAllStatistics(req: Request, res: Response): Promise<void> {
+          try {
+               const date = req.query.date ? new Date(req.query.date as string) : new Date();
+               const stastistics = await this.statisticService.getStatisticsByDate(date);
+
+               res.json({
+                    success: true,
+                    data: stastistics,
+               });
+          } catch (error: any) {
+               res.status(500).json({
+                    success: false,
+                    error: error.message || 'Errore durante il recupero delle statistiche.'
+               });
+          }
+
      }
 }
 export default StatatisticsController;
