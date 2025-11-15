@@ -5,6 +5,8 @@ import express, { Express } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import sequelize from './config/database';
+import './models/MusicEvent';
+import './models/Statistic';
 import { MusicEventRepository } from './repositories/MusicEventRepository';
 import { EventProcessingService } from './services/EventProcessingService';
 import { EventSubject } from './observers/EventSubject';

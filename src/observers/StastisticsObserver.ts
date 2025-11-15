@@ -27,7 +27,7 @@ export class StatisticsObserver implements IObserver {
                const dayEvents = await musicEventRepository.findByDate(eventDate);
 
                //Calcola tutte le statistiche
-               const strategies = ['artista_più_suonato, durata_media, tendenza_giornaliera'];
+               const strategies = ['artista_più_suonato, durata_media, tendenza_giornaliera, ore_di_punta'];
 
                for(const strategyType of strategies) {
                     const result = await this.statisticService.calculeteStatistics(

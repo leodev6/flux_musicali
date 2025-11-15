@@ -5,10 +5,10 @@ import DailyTrendStrategy from './DailyTrendStrategy';
 import PeakHoursStrategy from './PeakHoursStrategy';
 
 export class StatisticsStrategyFactory {
-     private static strategies: Map<string, IStatisticsStrategy> = new Map([
-          ['artista_più_suonato', new MostPlayedArtistStrategy()],
-          ['durata_media', new AverageDurationStrategy()],
-          ['tendenza_giornaliera', new DailyTrendStrategy()],
+     private static strategies: Map<string, IStatisticsStrategy> = new Map<string, IStatisticsStrategy>([
+          ['most_played_artist', new MostPlayedArtistStrategy()],
+          ['avg_duration', new AverageDurationStrategy()],
+          ['daily_trend', new DailyTrendStrategy()],
           ['peak_hours', new PeakHoursStrategy()],
      ]);
 
