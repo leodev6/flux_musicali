@@ -11,6 +11,9 @@ export interface MusicEventInput {
      trackId: string,
      artist: string,
      duration: number,
+     genre?: string;
+     country?: string;
+     device?: string;
      timestamp: string,
 }
 
@@ -42,6 +45,9 @@ export class EventProcessingService {
                trackId: eventData.trackId,
                artist: eventData.artist,
                duration: eventData.duration,
+               genre: eventData.genre,
+               country: eventData.country,
+               device: eventData.device,
                timestamp: new Date(eventData.timestamp),
           });
 

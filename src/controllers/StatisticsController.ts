@@ -67,6 +67,24 @@ export class StatatisticsController {
           }
      }
 
+     async getPeakHours(req: Request, res: Response): Promise<void> {
+          try {
+               const date = req.query.date ? new Date(req.query.date as string) : new Date();
+               const events = await this.musicEventRepository.findByDate(date);
+               const result = await this.statisticService.getPeakHours(events);
+
+               res.json({
+                    success: true,
+                    data: result,
+               });
+          } catch (error: any) {
+               res.status(500).json({
+                    success: false,
+                    error: error.message || 'Errore durante il recupero delle ore di punta',
+               });
+          }
+     }
+
      async getAllStatistics(req: Request, res: Response): Promise<void> {
           try {
                const date = req.query.date ? new Date(req.query.date as string) : new Date();

@@ -6,6 +6,9 @@ export interface MusicEventAttributes {
      userId: string;
      trackId: string;
      artist: string;
+     genre?: string;
+     country?: string;
+     device?: string;
      duration: number;
      timestamp: Date;
      createdAt?: Date;
@@ -22,6 +25,9 @@ export class MusicEvent
      public userId!: string;
      public trackId!: string;
      public artist!: string;
+     public genre?: string;
+     public country?: string;
+     public device?: string;
      public duration!: number;
      public timestamp!: Date;
      public readonly createdAt!: Date;
@@ -49,6 +55,21 @@ MusicEvent.init(
                type: DataTypes.STRING,
                allowNull: false,
           },
+          genre: {
+               type: DataTypes.STRING,
+               allowNull: true,
+               comment: 'Musical genre',
+          },
+          country: {
+               type: DataTypes.STRING,
+               allowNull: true,
+               comment: 'Country code',
+          },
+          device: {
+               type: DataTypes.STRING,
+               allowNull: true,
+               comment: 'Device type (mobile, desktop, tablet, etc.)',
+          },
           duration: {
                type: DataTypes.INTEGER,
                allowNull: false,
@@ -69,6 +90,15 @@ MusicEvent.init(
                },
                {
                     fields: ['artist'],
+               },
+               {
+                    fields: ['genre'],
+               },
+               {
+                    fields: ['country'],
+               },
+               {
+                    fields: ['device'],
                },
                {
                     fields: ['timestamp'],

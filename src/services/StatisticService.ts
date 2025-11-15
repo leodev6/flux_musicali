@@ -42,10 +42,15 @@ export class StatisticService {
           return await this.calculeteStatistics('tendenza_giornaliera');
      }
 
+     async getPeakHours(events?: MusicEvent[]): Promise<StatisticsResult | null> {
+          return await this.calculeteStatistics('ore_di_punta', events);
+     }
+
      async getStatisticsByDate(date: Date): Promise<{
           mostPlayedArtist: StatisticsResult | null;
           averageDuration: StatisticsResult | null;
           dailyTrend: StatisticsResult | null;
+          peakHours: StatisticsResult | null;
      }> {
           const dayEvents = await this.musicEventRepository.findByDate(date);
 
@@ -53,6 +58,7 @@ export class StatisticService {
                mostPlayedArtist: await this.getMostPlayedArtist(dayEvents),
                averageDuration: await this.getAverageDuration(dayEvents),
                dailyTrend: await this.getDailyTrends(dayEvents),
+               peakHours: await this.getPeakHours(dayEvents),
           };
      }
 }

@@ -16,6 +16,9 @@ export function createStatisticsRoutes(statatisticsController: StatatisticsContr
           statatisticsController.getDailyTrends(req, res)
      );
 
+     router.get('/ore_di_punta', (req, res) =>
+          statatisticsController.getPeakHours(req, res));
+
      router.get('/all', (req, res) =>
           statatisticsController.getAllStatistics(req, res)
      );

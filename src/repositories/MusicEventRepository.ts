@@ -59,6 +59,18 @@ export class MusicEventRepository implements IRepository<MusicEvent> {
           return await this.findByDateRange(starOfDay, endOfDay);
      }
 
+     async findByGenre(genre: string): Promise<MusicEvent[]> {
+          return await MusicEvent.findAll({ where: { genre } });
+     }
+
+     async findByCountry(country: string): Promise<MusicEvent[]> {
+          return await MusicEvent.findAll({ where: { country } });
+     }
+
+     async findByDevice(device: string): Promise<MusicEvent[]> {
+          return await MusicEvent.findAll({ where: { device } });
+     }
+
 }
 
 export default MusicEventRepository;
