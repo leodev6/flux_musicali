@@ -25,7 +25,7 @@ export class StatisticService {
                return null;
           }
 
-          //Se gli eventi non vengono forniti, ottieni tutti gli eventi
+          //Se gli eventi non vengono forniti, ottiene tutti gli eventi dal repository
           const eventsToProcess = events || (await this.musicEventRepository.findAll());
           return await strategy.calculate(eventsToProcess);
      }

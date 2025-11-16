@@ -40,24 +40,24 @@ async function inizializeDatabase(): Promise<void> {
 
 //Inizializzazione dei servizi e le dipendenze
 function initializaServices() {
-     //Ripository
+     //RInizializzazione dei repository per l'accesso ai dati
      const musicEventRepository = new MusicEventRepository();
      const statisticRepository = new StatatisticRepository();
 
-     //Service
+     //Inizializzazione dei servizi e del subject per il pattern Observer
      const eventSubject = new EventSubject();
      const statisticService = new StatisticService(musicEventRepository);
      const eventProcessingService = new EventProcessingService(musicEventRepository, eventSubject);
 
-     //Observers
+     //Configurazione degli observer: StatisticsObserver viene registrato per ricevere notifiche
      const statisticsObserver = new StatisticsObserver(statisticService, statisticRepository);
      eventSubject.attach(statisticsObserver);
 
-     //Controller 
+     // Inizializzazione dei controller per gestire le richieste HTTP
      const eventController = new EventController(eventProcessingService);
      const statisticsController = new StatatisticsController(statisticService, musicEventRepository);
 
-     //Routes
+     //Configurazione delle route API e associazione all'applicazione Express
      const routes = createRoutes(eventController, statisticsController);
      app.use('/api', routes);
 

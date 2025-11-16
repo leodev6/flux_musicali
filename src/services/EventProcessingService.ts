@@ -71,7 +71,7 @@ export class EventProcessingService {
           return musicEvent;
      }
 
-     async elaboraEvento(events: MusicEventInput[]): Promise<MusicEvent[]> {
+     async elaboraEventoBatch(events: MusicEventInput[]): Promise<MusicEvent[]> {
           const processedEvents: MusicEvent[] = [];
 
           for (const eventData of events) {
@@ -80,11 +80,24 @@ export class EventProcessingService {
                     processedEvents.push(event);
                } catch (error) {
                     console.error('Errore nell\'elaborazione dell\'evento:', error);
-                    // Continua a elaborare altri eventi
+                    // Continua a elaborare gli altri eventi anche se uno fallisce
                }
           }
 
           return processedEvents;
+     }
+
+     async getAllEvents(): Promise<MusicEvent[]> {
+          return await this.musicEventRepository.findAll();
+     }
+
+
+     async getEventById(id: number): Promise<MusicEvent | null> {
+          return await this.musicEventRepository.findById(id);
+     }
+
+     async getEventsByArtist(artist: string): Promise<MusicEvent[]> {
+          return await this.musicEventRepository.findByArtist(artist);
      }
 
 
