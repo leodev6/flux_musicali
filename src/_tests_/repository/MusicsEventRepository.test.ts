@@ -103,4 +103,20 @@ describe('MusicEventRepository', () => {
                expect(result).toEqual(mockEvents);
           });
      });
+
+     describe('findByDate', () => {
+          it('dovrebbe trovare eventi per una data specifica', async () => {
+               const date = new Date('2024-01-15');
+               const mockEvents = [{ id: 1, timestamp: date } as MusicEvent];
+
+               jest.spyOn(repository, 'findByDateRange').mockResolvedValue(mockEvents);
+
+               const result = await repository.findByDate(date);
+
+               expect(repository.findByDateRange).toHaveBeenCalled();
+               expect(result).toEqual(mockEvents);
+          });
+     });
+
+     
 });
