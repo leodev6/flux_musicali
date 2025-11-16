@@ -85,8 +85,8 @@ describe('MusicEventRepository', () => {
 
      describe('findByDateRange', () => {
           it('dovrebbe trovare eventi per un range di tate', async () => {
-               const startDate = new Date('');
-               const endDate = new Date('');
+               const startDate = new Date('2024-01-01');
+               const endDate = new Date('2024-01-31');
                const mockEvents = [{ id: 1, timestamp: new Date('2024-01-15') } as MusicEvent];
 
                mockMusicEvent.findAll = jest.fn().mockResolvedValue(mockEvents);
@@ -101,6 +101,6 @@ describe('MusicEventRepository', () => {
                     },
                });
                expect(result).toEqual(mockEvents);
-          })
-     })
+          });
+     });
 });
