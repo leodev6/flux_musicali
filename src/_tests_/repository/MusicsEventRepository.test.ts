@@ -1,6 +1,7 @@
 import { MusicEventRepository } from '../../repositories/MusicEventRepository';
 import MusicEvent from '../../models/MusicEvent';
 import { json, Op, where } from 'sequelize';
+import { timestamp } from 'rxjs';
 
 // Mock del modello Sequelize
 jest.mock('../../models/MusicEvent');
@@ -78,8 +79,28 @@ describe('MusicEventRepository', () => {
                const result = await repository.findByArtist('Ultimo');
 
                expect(mockMusicEvent.findAll).toHaveBeenCalledWith({ where: { artist: 'Ultimo'}});
+               expect(result).toEqual(mockEvent);
           });
      });
 
-     
+     describe('findByDateRange', () => {
+          it('dovrebbe trovare eventi per un range di tate', async () => {
+               const startDate = new Date('');
+               const endDate = new Date('');
+               const mockEvents = [{ id: 1, timestamp: new Date('2024-01-15') } as MusicEvent];
+
+               mockMusicEvent.findAll = jest.fn().mockResolvedValue(mockEvents);
+
+               const result = await repository.findByDateRange(startDate, endDate);
+
+               expect(mockMusicEvent.findAll).toHaveBeenCalledWith({
+                    where: {
+                         timestamp: {
+                              [Op.between]:[startDate, endDate],
+                         },
+                    },
+               });
+               expect(result).toEqual(mockEvents);
+          })
+     })
 });
