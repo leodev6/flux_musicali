@@ -1,6 +1,6 @@
 import { MusicEventRepository } from '../../repositories/MusicEventRepository';
 import MusicEvent from '../../models/MusicEvent';
-import { Op } from 'sequelize';
+import { json, Op, where } from 'sequelize';
 
 // Mock del modello Sequelize
 jest.mock('../../models/MusicEvent');
@@ -69,4 +69,17 @@ describe('MusicEventRepository', () => {
                expect(result).toEqual(mockEvents);
           });
      });
+
+     describe('findByArtist', () => {
+          it('dovrebbe trovare eventi per artista', async () => {
+               const mockEvent = [{ id: 1, artist: 'Ultimo' } as MusicEvent];
+               mockMusicEvent.findAll = jest.fn().mockResolvedValue(mockEvent);
+
+               const result = await repository.findByArtist('Ultimo');
+
+               expect(mockMusicEvent.findAll).toHaveBeenCalledWith({ where: { artist: 'Ultimo'}});
+          });
+     });
+
+     
 });
