@@ -135,4 +135,28 @@ describe('StatisticService', () => {
           });
      });
 
+     describe('getStatisticsByDate', () => {
+          it('dovrebbe recuperare tutte le statistiche per una data specifica', async () => {
+               const data = new Date('2024-01-01');
+               const mockEvent: MusicEvent[] = [
+                    { id: 1, userId: 'u1', trackId: 't001', artist: 'Ultimo', duration: 832, timestamp: data } as MusicEvent,
+               ];
+
+               mockMusicEventRepository.findByDate.mockResolvedValue(mockEvent);
+
+               jest.spyOn(statisticService, 'getMostPlayedArtist').mockResolvedValue({ type: 'artista_più_suonato', value: 'Ultimo' } as StatisticsResult);
+               jest.spyOn(statisticService, 'getAverageDuration').mockResolvedValue({ type: 'durata_media', value: 'Ultimo' } as StatisticsResult);
+               jest.spyOn(statisticService, 'getDailyTrends').mockResolvedValue({ type: 'tendenza_giornaliera', value: 'Ultimo' } as StatisticsResult);
+               jest.spyOn(statisticService, 'getPeakHours').mockResolvedValue({ type: 'ore_di_punta', value: 'Ultimo' } as StatisticsResult);
+
+               const result = await statisticService.getStatisticsByDate(data);
+
+               expect(mockMusicEventRepository.findByDate).toHaveBeenCalledWith(data);
+               expect(result.mostPlayedArtist).toBeDefined;
+               expect(result.averageDuration).toBeDefined;
+               expect(result.dailyTrend).toBeDefined;
+               expect(result.peakHours).toBeDefined;
+          });
+     });
+
 })
