@@ -2,7 +2,6 @@ import { EventProcessingService, MusicEventInput } from '../../services/EventPro
 import MusicEventRepository from '../../repositories/MusicEventRepository';
 import { EventSubject } from '../../observers/EventSubject';
 import { MusicEvent } from '../../models/MusicEvent';
-import { timestamp } from 'rxjs';
 
 // Mock dei repository e observer
 jest.mock('../../repositories/MusicEventRepository');

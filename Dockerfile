@@ -2,24 +2,24 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files
+# Copia i file del pacchetto
 COPY package*.json ./
 
-# Install all dependencies (including dev dependencies for build)
+# Installa tutte le dipendenze (incluse le dipendenze di sviluppo per la build)
 RUN npm ci
 
-# Copy source code
+# Copia il codice sorgente
 COPY . .
 
-# Build TypeScript
+# Costruisci TypeScript
 RUN npm run build
 
-# Remove dev dependencies to reduce image size
+# Rimuovi le dipendenze dello sviluppatore per ridurre le dimensioni dell'immagine
 RUN npm prune --production
 
-# Expose port
+# Esporre il porto
 EXPOSE 3000
 
-# Start application
+# Avvia l'applicazione
 CMD ["npm", "start"]
 
