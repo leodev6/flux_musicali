@@ -103,4 +103,64 @@ describe('EventProcessingService', () => {
                );
           });
      });
+
+     describe('getAllEvents', () => {
+          it('dovrebbe recuperare tutti gli eventi', async () => {
+               const mockEvents = [
+                    { id: 1, userId: 'user1', trackId: 'track1', artist: 'Artist1', duration: 180, timestamp: new Date() },
+                    { id: 2, userId: 'user2', trackId: 'track2', artist: 'Artist2', duration: 200, timestamp: new Date() },
+               ] as MusicEvent[];
+
+               mockMusicEventRepository.findAll.mockResolvedValue(mockEvents);
+
+               const result = await eventProcessingService.getAllEvents();
+
+               expect(mockMusicEventRepository.findAll).toHaveBeenCalled();
+               expect(result).toEqual(mockEvents);
+          });
+     });
+
+     describe('getEventById', () => {
+          it('dovrebbe recuperare un evento per ID', async () => {
+               const mockEvent = {
+                    id: 1,
+                    userId: 'user123',
+                    trackId: 'track456',
+                    artist: 'Artist Name',
+                    duration: 180,
+                    timestamp: new Date(),
+               } as MusicEvent;
+
+               mockMusicEventRepository.findById.mockResolvedValue(mockEvent);
+
+               const result = await eventProcessingService.getEventById(1);
+
+               expect(mockMusicEventRepository.findById).toHaveBeenCalledWith(1);
+               expect(result).toEqual(mockEvent);
+          });
+
+          it('dovrebbe restituire null se l\'evento non esiste', async () => {
+               mockMusicEventRepository.findById.mockResolvedValue(null);
+
+               const result = await eventProcessingService.getEventById(999);
+
+               expect(result).toBeNull();
+          });
+     });
+
+     describe('getEventsByArtist', () => {
+          it('dovrebbe recuperare eventi per artista', async () => {
+               const mockEvents = [
+                    { id: 1, userId: 'user1', trackId: 'track1', artist: 'Laura Pausini', duration: 180, timestamp: new Date() },
+                    { id: 2, userId: 'user2', trackId: 'track2', artist: 'Eros Ramazzotti', duration: 200, timestamp: new Date() },
+               ] as MusicEvent[];
+
+               mockMusicEventRepository.findByArtist.mockResolvedValue(mockEvents);
+
+               const result = await eventProcessingService.getEventsByArtist('Laura Pausini');
+
+               expect(mockMusicEventRepository.findByArtist).toHaveBeenCalledWith('Eros Ramazzotti');
+               expect(result).toEqual(mockEvents);
+          });
+     });
 });
