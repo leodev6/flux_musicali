@@ -84,6 +84,22 @@ describe('StatisticService', () => {
                const result = await statisticService.getMostPlayedArtist();
 
                expect(statisticService.calculeteStatistics).toHaveBeenCalledWith('artista_più_suonato', undefined);
+               expect(result).toEqual(mockResult);
+          });
+     });
+
+     describe('getAverageDuration', () => {
+          it('dovrebbe chiamare calculateStatistic con il tipo corretto', async () => {
+               const mockResult: StatisticsResult = {
+                    type: 'durata_media',
+                    value: 180,
+               };
+
+               jest.spyOn(statisticService, 'calculeteStatistics').mockResolvedValue(mockResult);
+               const result = await statisticService.getAverageDuration();
+
+               expect(statisticService.calculeteStatistics).toHaveBeenCalledWith('durata_media', undefined);
+               expect(result).toEqual(mockResult);
           });
      });
 })
