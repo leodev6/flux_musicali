@@ -102,4 +102,23 @@ describe('StatisticService', () => {
                expect(result).toEqual(mockResult);
           });
      });
+
+     describe('getDailyTrends', () => {
+          it('dovrebbe chiamare calculeteStatistics con il tipo corretto', async () => {
+               const mockResult: StatisticsResult = {
+                    type: 'tendenza_giornaliera',
+                    value: [],
+               };
+
+               jest.spyOn(statisticService, 'calculeteStatistics').mockResolvedValue(mockResult);
+
+               const result = await statisticService.getDailyTrends();
+
+               expect(statisticService.calculeteStatistics).toHaveBeenCalledWith('tendenza_giornaliera', undefined);
+               expect(result).toEqual(mockResult);
+          });
+     });
+
+
+
 })
