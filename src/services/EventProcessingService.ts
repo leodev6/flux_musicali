@@ -2,7 +2,6 @@ import { Subject, Observable } from 'rxjs';
 import { MusicEvent, MusicEventCreationAttributes } from '../models/MusicEvent';
 import MusicEventRepository from '../repositories/MusicEventRepository';
 import EventSubject from '../observers/EventSubject';
-import { timeStamp } from 'console';
 
 
 
@@ -39,10 +38,9 @@ export class EventProcessingService {
           //Convalida i dati degli eventi
           this.validateEventData(eventData);
 
-          // Debug: log des données reçues
-          console.log('Données reçues:', JSON.stringify(eventData, null, 2));
+          console.log('Dati ricevuti:', JSON.stringify(eventData, null, 2));
 
-          // Crea evento nel database - passer toutes les valeurs directement
+          // Crea evento nel database
           const eventToCreate: MusicEventCreationAttributes = {
                userId: eventData.userId,
                trackId: eventData.trackId,
@@ -54,13 +52,15 @@ export class EventProcessingService {
                device: eventData.device,
           };
 
-          // Debug: log de l'objet créé
-          console.log('Objet à créer dans la DB:', JSON.stringify(eventToCreate, null, 2));
+          console.log('Objet creato nel DB:', JSON.stringify(eventToCreate, null, 2));
 
           const musicEvent = await this.musicEventRepository.create(eventToCreate);
           
-          // Debug: log de l'objet créé
-          console.log('Événement créé:', JSON.stringify(musicEvent.toJSON(), null, 2));
+          const serializedEvent =
+               typeof (musicEvent as any)?.toJSON === 'function'
+                    ? (musicEvent as any).toJSON()
+                    : musicEvent;
+          console.log('Evento creato:', JSON.stringify(serializedEvent, null, 2));
 
           // Emetti nel flusso RxJS
           this.eventStream$.next(musicEvent);
@@ -103,15 +103,15 @@ export class EventProcessingService {
 
      private validateEventData(eventData: MusicEventInput): void {
           if (!eventData.userId || !eventData.trackId || !eventData.artist) {
-               throw new Error('Campi obligatori mancanti: userId, trackId, artist');
+               throw new Error('Campi obbligatori mancanti: userId, trackId, artist');
           }
 
           if (typeof eventData.duration !== 'number' || eventData.duration <= 0) {
-               throw new Error('La durata deve essere un possitivo superiore a zero');
+               throw new Error('La durata deve essere un numero positivo superiore a zero');
           }
 
           if (!eventData.timestamp || isNaN(Date.parse(eventData.timestamp))) {
-               throw new Error('Formato timetemp non valido');
+               throw new Error('Formato timestamp non valido');
           }
      }
 }

@@ -2,6 +2,7 @@ import { EventProcessingService, MusicEventInput } from '../../services/EventPro
 import MusicEventRepository from '../../repositories/MusicEventRepository';
 import { EventSubject } from '../../observers/EventSubject';
 import { MusicEvent } from '../../models/MusicEvent';
+import { timestamp } from 'rxjs';
 
 // Mock dei repository e observer
 jest.mock('../../repositories/MusicEventRepository');
@@ -35,8 +36,8 @@ describe('EventProcessingService', () => {
 
      describe('processEvent', () => {
           const validEventData: MusicEventInput = {
-               userId: 'user123',
-               trackId: 'track456',
+               userId: 'u1',
+               trackId: 't001',
                artist: 'Ultimo',
                duration: 180,
                timestamp: '2024-01-01T12:00:00Z',
@@ -104,11 +105,106 @@ describe('EventProcessingService', () => {
           });
      });
 
+     describe('elaboraEventoBatch', () => {
+          it('dovrebbe processare multipli eventi con successo', async () => {
+               const eventsData: MusicEventInput[] = [
+                    {
+                         userId: 'u1',
+                         trackId: 't001',
+                         artist: 'Ultimo',
+                         duration: 180,
+                         timestamp: '2024-01-01T12:00:00Z',
+                    },
+                    {
+                         userId: 'u2',
+                         trackId: 't002',
+                         artist: 'Sfera Ebbasta',
+                         duration: 200,
+                         timestamp: '2024-01-01T12:00:00Z',
+                    },
+               ];
+
+               const mockEvents = eventsData.map((data, index) => ({
+                    id: index + 1,
+                    ...data,
+                    timestamp: new Date(data.timestamp),
+               })) as MusicEvent[];
+
+               mockMusicEventRepository.create
+                    .mockResolvedValueOnce(mockEvents[0])
+                    .mockResolvedValueOnce(mockEvents[1]);
+               mockEventSubject.notify.mockResolvedValue();
+
+               const result = await eventProcessingService.elaboraEventoBatch(eventsData);
+
+               expect(result).toHaveLength(2);
+               expect(mockMusicEventRepository.create).toHaveBeenCalledTimes(2);
+          });
+
+          it('dovrebbe continuare a processare anche se un evento fallisce', async () => {
+               const eventsData: MusicEventInput[] = [
+                    {
+                         userId: 'u1',
+                         trackId: 't001',
+                         artist: 'Ultimo',
+                         duration: 180,
+                         timestamp: '2024-01-01T12:00:00Z',
+                    },
+                    {
+                         userId: 'u2',
+                         trackId: 't002',
+                         artist: 'Sfera Ebbasta',
+                         duration: 200,
+                         timestamp: '2024-01-01T12:00:00Z',
+                    },
+                    {
+                         userId: 'u3',
+                         trackId: 'Mahmood',
+                         artist: 't003',
+                         duration: 150,
+                         timestamp: '2024-01-01T12:00:00Z',
+                    },
+               ];
+
+               const mockEvent1 = { id: 1, ...eventsData[0], timestamp: new Date(eventsData[0].timestamp) } as MusicEvent;
+               const mockEvent3 = { id: 3, ...eventsData[2], timestamp: new Date(eventsData[2].timestamp) } as MusicEvent;
+
+               mockMusicEventRepository.create
+                    .mockResolvedValueOnce(mockEvent1)
+                    .mockRejectedValueOnce(new Error('Invalid data'))
+                    .mockResolvedValueOnce(mockEvent3);
+               mockEventSubject.notify.mockResolvedValue();
+
+               const result = await eventProcessingService.elaboraEventoBatch(eventsData);
+
+               expect(result).toHaveLength(2);
+               expect(result[0].id).toBe(1);
+               expect(result[1].id).toBe(3);
+          });
+     });
+
      describe('getAllEvents', () => {
           it('dovrebbe recuperare tutti gli eventi', async () => {
                const mockEvents = [
-                    { id: 1, userId: 'user1', trackId: 'track1', artist: 'Artist1', duration: 180, timestamp: new Date() },
-                    { id: 2, userId: 'user2', trackId: 'track2', artist: 'Artist2', duration: 200, timestamp: new Date() },
+                    { id: 1, userId: 'u1', trackId: 't001', artist: 'Mahmood', duration: 180, timestamp: new Date() },
+                    { id: 2, userId: 'u2', trackId: 't002', artist: 'Ultimo', duration: 200, timestamp: new Date() },
+               ] as MusicEvent[];
+
+               mockMusicEventRepository.findAll.mockResolvedValue(mockEvents);
+
+               const result = await eventProcessingService.getAllEvents();
+
+               expect(mockMusicEventRepository.findAll).toHaveBeenCalled();
+               expect(result).toEqual(mockEvents);
+          });
+     });
+
+
+     describe('getAllEvents', () => {
+          it('dovrebbe recuperare tutti gli eventi', async () => {
+               const mockEvents = [
+                    { id: 1, userId: 'u1', trackId: 't001', artist: 'Mahmood', duration: 180, timestamp: new Date() },
+                    { id: 2, userId: 'u2', trackId: 't002', artist: 'Ultimo', duration: 200, timestamp: new Date() },
                ] as MusicEvent[];
 
                mockMusicEventRepository.findAll.mockResolvedValue(mockEvents);
@@ -124,9 +220,9 @@ describe('EventProcessingService', () => {
           it('dovrebbe recuperare un evento per ID', async () => {
                const mockEvent = {
                     id: 1,
-                    userId: 'user123',
-                    trackId: 'track456',
-                    artist: 'Artist Name',
+                    userId: 'u3',
+                    trackId: 't003',
+                    artist: 'Mahmood',
                     duration: 180,
                     timestamp: new Date(),
                } as MusicEvent;
@@ -151,13 +247,13 @@ describe('EventProcessingService', () => {
      describe('getEventsByArtist', () => {
           it('dovrebbe recuperare eventi per artista', async () => {
                const mockEvents = [
-                    { id: 1, userId: 'user1', trackId: 'track1', artist: 'Laura Pausini', duration: 180, timestamp: new Date() },
-                    { id: 2, userId: 'user2', trackId: 'track2', artist: 'Eros Ramazzotti', duration: 200, timestamp: new Date() },
+                    { id: 4, userId: 'u4', trackId: 't001', artist: 'Laura Pausini', duration: 210, timestamp: new Date() },
+                    { id: 5, userId: 'u5', trackId: 't005', artist: 'Eros Ramazzotti', duration: 167, timestamp: new Date() },
                ] as MusicEvent[];
 
                mockMusicEventRepository.findByArtist.mockResolvedValue(mockEvents);
 
-               const result = await eventProcessingService.getEventsByArtist('Laura Pausini');
+               const result = await eventProcessingService.getEventsByArtist('Eros Ramazzotti');
 
                expect(mockMusicEventRepository.findByArtist).toHaveBeenCalledWith('Eros Ramazzotti');
                expect(result).toEqual(mockEvents);
