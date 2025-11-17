@@ -11,8 +11,8 @@ import { MusicEventRepository } from './repositories/MusicEventRepository';
 import { EventProcessingService } from './services/EventProcessingService';
 import { EventSubject } from './observers/EventSubject';
 import { createRoutes } from './routes';
-import StatatisticRepository from './repositories/StatistiqueRepository';
 import { StatatisticsController } from './controllers';
+import StatatisticRepository from './repositories/StatisticsRepository';
 
 dotenv.config();
 const app: Express = express();

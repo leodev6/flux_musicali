@@ -13,7 +13,7 @@ export class EventController {
                const event = await this.eventProcessingService.processEvent(req.body);
                res.status(201).json({
                     success: true,
-                    date: event,
+                    data: event,
                });
           } catch (error: any) {
                res.status(401).json({

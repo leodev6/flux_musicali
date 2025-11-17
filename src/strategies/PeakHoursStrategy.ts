@@ -48,7 +48,7 @@ export class PeakHoursStrategy implements IStatisticsStrategy {
           // Processa gli eventi
           events.forEach((event) => {
                const eventDate = new Date(event.timestamp);
-               const hour = eventDate.getHours();
+               const hour = eventDate.getUTCHours();
                const hourInfo = hourData.get(hour);
 
                if (hourInfo) {

@@ -12,7 +12,7 @@ export class MostPlayedArtistStrategy implements IStatisticsStrategy {
             return Promise.resolve({
                 type: this.getType(),
                 value: null,
-                metedata: { message: 'Nessun evento disonibile' },
+                metadata: { message: 'Nessun evento disponibile' },
             });
         }
         const artistCounts = new Map<string, number>();

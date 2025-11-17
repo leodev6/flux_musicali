@@ -1,4 +1,4 @@
-import { StatisticAttributes, StatisticCreationAttributes } from './../models/Statistic';
+import { StatisticAttributes, StatisticCreationAttributes } from '../models/Statistic';
 import { IRepository } from "./IRepository";
 import Statistic from "../models/Statistic";
 import { Op } from 'sequelize';

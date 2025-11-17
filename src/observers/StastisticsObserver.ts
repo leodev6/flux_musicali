@@ -1,7 +1,7 @@
 import { IObserver } from "./IObserver";
 import { StatisticService } from "../services/StatisticService";
-import StatatisticRepository from "../repositories/StatistiqueRepository";
 import MusicEvent from "../models/MusicEvent";
+import StatatisticRepository from "../repositories/StatisticsRepository";
 
 export class StatisticsObserver implements IObserver {
      private statisticService: StatisticService;
