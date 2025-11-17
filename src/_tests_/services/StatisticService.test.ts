@@ -71,5 +71,19 @@ describe('StatisticService', () => {
 
                expect(result).toBeNull();
           });
-     })
+     });
+
+     describe('getMostPlayedArtist', () => {
+          it('dovrebbe chiamare calculateStatistics con il tipo corretto', async () => {
+               const mockResult :StatisticsResult = {
+                    type: 'artista_più_suonato',
+                    value: 'Ultimo',
+               };
+
+               jest.spyOn(statisticService, 'calculeteStatistics').mockResolvedValue(mockResult);
+               const result = await statisticService.getMostPlayedArtist();
+
+               expect(statisticService.calculeteStatistics).toHaveBeenCalledWith('artista_più_suonato', undefined);
+          });
+     });
 })
