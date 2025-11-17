@@ -119,6 +119,20 @@ describe('StatisticService', () => {
           });
      });
 
+     describe('getPeakHours', () => {
+          it('dovrebbe chiamare calculeteStatistics con il tipo corretto', async () => {
+               const mockResult: StatisticsResult = {
+                    type: 'ore_di_punta',
+                    value: {},
+               };
 
+               jest.spyOn(statisticService, 'calculeteStatistics').mockResolvedValue(mockResult);
+
+               const result = await statisticService.getPeakHours();
+
+               expect(statisticService.calculeteStatistics).toHaveBeenCalledWith('ore_di_punta', undefined);
+               expect(result).toEqual(mockResult);
+          });
+     });
 
 })
