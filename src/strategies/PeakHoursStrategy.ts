@@ -1,4 +1,15 @@
-import { IStatisticsStrategy, StatisticsResult } from './IStatistiqueStrategy';
+/**
+ * Strategia per calcolare le ore di punta
+ * 
+ * Questa strategia analizza gli eventi musicali raggruppandoli per ora del giorno,
+ * calcolando per ogni ora (0-23) il numero di eventi, la durata totale,
+ * la durata media, il numero di utenti unici e il numero di artisti unici.
+ * Identifica anche le top 3 ore di punta.
+ * 
+ * @module PeakHoursStrategy
+ * @author Lionel Djouaka
+ */
+import { IStatisticsStrategy, StatisticsResult } from './IStatisticStrategy';
 import { MusicEvent } from '../models/MusicEvent';
 
 export interface PeakHourData {

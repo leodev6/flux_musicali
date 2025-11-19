@@ -1,12 +1,39 @@
+/**
+ * Repository per gli eventi musicali
+ * 
+ * Questo repository implementa l'interfaccia IRepository per gestire
+ * l'accesso ai dati degli eventi musicali nel database utilizzando Sequelize.
+ * Fornisce metodi CRUD standard e metodi specifici per query personalizzate.
+ * 
+ * @module MusicEventRepository
+ * @author Lionel Djouaka
+ */
 import { IRepository } from './IRepository';
 import MusicEvent, { MusicEventAttributes, MusicEventCreationAttributes } from '../models/MusicEvent';
 import { Op } from 'sequelize';
 
 
-
+/**
+ * Classe repository per gli eventi musicali
+ * 
+ * Implementa il pattern Repository per l'accesso ai dati degli eventi musicali,
+ * fornendo operazioni CRUD e metodi di ricerca personalizzati.
+ * 
+ * @class MusicEventRepository
+ * @implements {IRepository<MusicEvent>}
+ */
 export class MusicEventRepository implements IRepository<MusicEvent> {
+     /**
+      * Crea un nuovo evento musicale nel database
+      * 
+      * Sequelize include automaticamente tutte le proprietà definite nell'oggetto.
+      * 
+      * @async
+      * @method create
+      * @param {Partial<MusicEventCreationAttributes>} entita - Dati dell'evento da creare
+      * @returns {Promise<MusicEvent>} Promise che si risolve con l'evento creato
+      */
      async create(entita: Partial<MusicEventCreationAttributes>): Promise<MusicEvent> {
-          // Sequelize inclut automatiquement toutes les propriétés définies dans l'objet
           return await MusicEvent.create(entita as MusicEventCreationAttributes);
      }
 

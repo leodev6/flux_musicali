@@ -1,6 +1,23 @@
+/**
+ * Controller per la gestione degli eventi musicali
+ * 
+ * Questo controller gestisce tutte le richieste HTTP relative agli eventi musicali,
+ * delegando la logica di business al EventProcessingService.
+ * 
+ * @module EventController
+ * @author Lionel Djouaka
+ */
 import { Request, Response } from "express";
 import { EventProcessingService } from "../services/EventProcessingService";
 
+/**
+ * Classe controller per gli eventi musicali
+ * 
+ * Gestisce le operazioni CRUD e l'elaborazione degli eventi musicali,
+ * fornendo endpoint REST per la creazione di eventi singoli e batch.
+ * 
+ * @class EventController
+ */
 export class EventController {
      private eventProcessingService: EventProcessingService;
 
@@ -8,6 +25,19 @@ export class EventController {
           this.eventProcessingService = eventProcessingService;
      }
 
+     /**
+ * Crea un nuovo evento musicale
+ * 
+ * Endpoint POST per creare un singolo evento musicale.
+ * Valida i dati in ingresso e li processa tramite il servizio.
+ * 
+ * @async
+ * @method createEvent
+ * @param {Request} req - Oggetto richiesta Express contenente i dati dell'evento nel body
+ * @param {Response} res - Oggetto risposta Express
+ * @returns {Promise<void>} Promise che si risolve quando la risposta è inviata
+ * 
+ */
      async createEvent(req: Request, res: Response): Promise<void> {
           try {
                const event = await this.eventProcessingService.processEvent(req.body);
@@ -23,6 +53,19 @@ export class EventController {
           }
      }
 
+     /**
+ * Crea multipli eventi musicali in batch
+ * 
+ * Endpoint POST per creare più eventi musicali contemporaneamente.
+ * Valida che il body contenga un array di eventi e li processa in sequenza.
+ * 
+ * @async
+ * @method creaEventiBatch
+ * @param {Request} req - Oggetto richiesta Express contenente un array di eventi nel body
+ * @param {Response} res - Oggetto risposta Express
+ * @returns {Promise<void>} Promise che si risolve quando la risposta è inviata
+ * 
+ */
      async creaEventiBatch(req: Request, res: Response): Promise<void> {
           try {
                const { events } = req.body;
@@ -48,6 +91,18 @@ export class EventController {
           }
      }
 
+     /**
+   * Recupera tutti gli eventi musicali
+   * 
+   * Endpoint GET per recuperare tutti gli eventi musicali presenti nel database.
+   * 
+   * @async
+   * @method getAllEvents
+   * @param {Request} req - Oggetto richiesta Express
+   * @param {Response} res - Oggetto risposta Express
+   * @returns {Promise<void>} Promise che si risolve quando la risposta è inviata
+   * 
+   */
      async getAllEvents(req: Request, res: Response): Promise<void> {
           try {
                const events = await this.eventProcessingService.getAllEvents();

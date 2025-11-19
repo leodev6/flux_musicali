@@ -1,8 +1,28 @@
+/**
+ * Observer per l'aggiornamento automatico delle statistiche
+ * 
+ * Questo observer viene notificato quando viene creato un nuovo evento musicale
+ * e aggiorna automaticamente tutte le statistiche per il giorno dell'evento.
+ * 
+ * @module StatisticsObserver
+ * @author Lionel Djouaka
+ */
+
 import { IObserver } from "./IObserver";
 import { StatisticService } from "../services/StatisticService";
 import MusicEvent from "../models/MusicEvent";
 import StatatisticRepository from "../repositories/StatisticsRepository";
 
+/**
+ * Classe observer per le statistiche
+ * 
+ * Implementa l'interfaccia IObserver per essere notificato quando viene creato
+ * un nuovo evento musicale. Quando notificato, calcola e aggiorna tutte le
+ * statistiche per il giorno dell'evento.
+ * 
+ * @class StatisticsObserver
+ * @implements {IObserver}
+ */
 export class StatisticsObserver implements IObserver {
      private statisticService: StatisticService;
      private statatisticRepository: StatatisticRepository;

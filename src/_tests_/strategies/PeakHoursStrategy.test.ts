@@ -1,6 +1,18 @@
+/**
+ * Test suite per PeakHoursStrategy
+ * 
+ * Testa il calcolo delle ore di punta degli eventi musicali.
+ * 
+ * @module PeakHoursStrategy.test
+ */
+
 import { PeakHoursStrategy } from '../../strategies/PeakHoursStrategy';
 import { MusicEvent } from '../../models/MusicEvent';
 
+/**
+ * Suite che valida il calcolo delle ore di punta, assicurando
+ * il popolamento delle 24 ore, la media per fascia oraria e i metadati principali.
+ */
 describe('PeakHoursStrategy', () => {
      let strategy: PeakHoursStrategy;
 

@@ -1,4 +1,15 @@
-import { IStatisticsStrategy, StatisticsResult } from "./IStatistiqueStrategy";
+/**
+ * Strategia per calcolare le tendenze giornaliere
+ * 
+ * Questa strategia analizza gli eventi musicali raggruppandoli per giorno,
+ * calcolando per ogni giorno il numero di eventi, la durata totale,
+ * il numero di artisti unici e il numero di utenti unici.
+ * 
+ * @module DailyTrendStrategy
+ * @author Lionel Djouaka
+ */
+
+import { IStatisticsStrategy, StatisticsResult } from "./IStatisticStrategy";
 import MusicEvent from "../models/MusicEvent";
 
 

@@ -1,6 +1,18 @@
-import { StatisticsStrategyFactory } from '../../strategies/StatistiquStrategyFactory';
-import { IStatisticsStrategy } from '../../strategies/IStatistiqueStrategy';
+/**
+ * Test suite per StatisticsStrategyFactory
+ * 
+ * Testa la factory per la creazione e gestione delle strategie di calcolo delle statistiche.
+ * 
+ * @module StatisticsStrategyFactory.test
+ */
 
+import { IStatisticsStrategy } from "../../strategies/IStatisticStrategy";
+import StatisticsStrategyFactory from "../../strategies/StatisticsStrategyFactory";
+
+/**
+ * Suite che verifica la factory delle strategie, includendo recupero,
+ * registrazione dinamica e validazione dei tipi supportati.
+ */
 describe('StatisticsStrategyFactory', () => {
      it('dovrebbe restituire la strategia corretta per artista_più_suonato', () => {
           const strategy = StatisticsStrategyFactory.getStrategy('artista_più_suonato');

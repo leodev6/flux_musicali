@@ -1,6 +1,29 @@
+/**
+ * Route per gli endpoint delle statistiche musicali
+ * 
+ * Questo modulo definisce le route HTTP per il recupero delle statistiche,
+ * inclusi endpoint per diverse tipologie di analisi sui dati musicali.
+ * 
+ * @module StatitiscRoutes
+ * @author Lionel Djouaka
+ */
 import { Router } from "express";
 import { StatatisticsController } from "../controllers/StatisticsController";
 
+/**
+ * Crea e configura le route per le statistiche musicali
+ * 
+ * Definisce gli endpoint REST per:
+ * - GET /artista_piu_suonato : Recupera l'artista più ascoltato
+ * - GET /durata_media : Recupera la durata media degli ascolti
+ * - GET /tendenza_giornaliera : Recupera le tendenze giornaliere
+ * - GET /ore_di_punta : Recupera le ore di punta
+ * - GET /all : Recupera tutte le statistiche in una singola richiesta
+ * 
+ * @function createStatisticsRoutes
+ * @param {StatatisticsController} statatisticsController - Controller per la gestione delle statistiche
+ * @returns {Router} Router Express configurato con le route delle statistiche
+ */
 export function createStatisticsRoutes(statatisticsController: StatatisticsController): Router {
      const router = Router();
 

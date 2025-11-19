@@ -1,11 +1,22 @@
+/**
+ * Test suite per MusicEventRepository
+ * 
+ * Testa le operazioni CRUD e le query personalizzate del repository degli eventi musicali.
+ * 
+ * @module MusicEventRepository.test
+ */
 import { MusicEventRepository } from '../../repositories/MusicEventRepository';
 import MusicEvent from '../../models/MusicEvent';
-import { json, Op, where } from 'sequelize';
-import { timestamp } from 'rxjs';
+import { Op } from 'sequelize';
+
 
 // Mock del modello Sequelize
 jest.mock('../../models/MusicEvent');
 
+/**
+ * Suite principale che copre tutte le query e operazioni CRUD del repository,
+ * assicurando che i metodi Sequelize siano invocati con i parametri corretti.
+ */
 describe('MusicEventRepository', () => {
 
      let repository: MusicEventRepository;
@@ -16,6 +27,9 @@ describe('MusicEventRepository', () => {
           mockMusicEvent = MusicEvent as jest.Mocked<typeof MusicEvent>;
      });
 
+     /**
+      * Verifica la fase di creazione del record e il passaggio dei dati a Sequelize.
+      */
      describe('create', () => {
           it('dovrebbe creare un nuovo evento', async () => {
                const eventData = {
@@ -78,7 +92,7 @@ describe('MusicEventRepository', () => {
 
                const result = await repository.findByArtist('Ultimo');
 
-               expect(mockMusicEvent.findAll).toHaveBeenCalledWith({ where: { artist: 'Ultimo'}});
+               expect(mockMusicEvent.findAll).toHaveBeenCalledWith({ where: { artist: 'Ultimo' } });
                expect(result).toEqual(mockEvent);
           });
      });
@@ -96,7 +110,7 @@ describe('MusicEventRepository', () => {
                expect(mockMusicEvent.findAll).toHaveBeenCalledWith({
                     where: {
                          timestamp: {
-                              [Op.between]:[startDate, endDate],
+                              [Op.between]: [startDate, endDate],
                          },
                     },
                });
@@ -118,5 +132,5 @@ describe('MusicEventRepository', () => {
           });
      });
 
-     
+
 });

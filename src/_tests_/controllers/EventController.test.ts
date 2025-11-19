@@ -1,3 +1,11 @@
+/**
+ * Test suite per EventController
+ * 
+ * Testa tutte le funzionalità del controller degli eventi musicali,
+ * inclusi la creazione di eventi singoli e batch, e il recupero di eventi.
+ * 
+ * @module EventController.test
+ */
 import { Request, Response } from 'express';
 import { EventController } from '../../controllers/EventController';
 import { EventProcessingService } from '../../services/EventProcessingService';
@@ -6,6 +14,10 @@ import { MusicEvent } from '../../models/MusicEvent';
 // Mock del servizio
 jest.mock('../../services/EventProcessingService');
 
+/**
+ * Suite principale che verifica il comportamento del controller degli eventi musicali,
+ * assicurandosi che ogni endpoint REST risponda correttamente in scenari positivi e di errore.
+ */
 describe('EventController', () => {
      let eventController: EventController;
      let mockEventProcessingService: jest.Mocked<EventProcessingService>;
@@ -38,6 +50,10 @@ describe('EventController', () => {
           };
      });
 
+     /**
+      * Verifica la creazione di singoli eventi tramite l'endpoint POST /api/events.
+      * Copre sia i casi di successo sia la propagazione degli errori dal servizio.
+      */
      describe('createEvent', () => {
           it('dovrebbe creare un evento con successo', async () => {
                const mockEvent = {

@@ -1,9 +1,26 @@
+/**
+ * Servizio per il calcolo delle statistiche musicali
+ * 
+ * Questo servizio utilizza il pattern Strategy per calcolare diverse tipologie
+ * di statistiche sugli eventi musicali. Utilizza una factory per ottenere
+ * la strategia appropriata in base al tipo di statistica richiesta.
+ * 
+ * @module StatisticService
+ * @author Lionel Djouaka
+ */
 import { MusicEventRepository } from './../repositories/MusicEventRepository';
 import MusicEvent from '../models/MusicEvent';
-import { StatisticsResult } from '../strategies/IStatistiqueStrategy';
-import { StatisticsStrategyFactory } from '../strategies/StatistiquStrategyFactory';
+import { StatisticsResult } from '../strategies/IStatisticStrategy';
+import { StatisticsStrategyFactory } from '../strategies/StatisticsStrategyFactory';
 
-
+/**
+ * Classe servizio per il calcolo delle statistiche
+ * 
+ * Fornisce metodi per calcolare diverse tipologie di statistiche utilizzando
+ * il pattern Strategy. Ogni tipo di statistica è gestito da una strategia specifica.
+ * 
+ * @class StatisticService
+ */
 
 export class StatisticService {
      private musicEventRepository: MusicEventRepository;

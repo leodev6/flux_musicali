@@ -1,4 +1,14 @@
-import { IStatisticsStrategy, StatisticsResult } from "./IStatistiqueStrategy";
+/**
+ * Strategia per calcolare l'artista più ascoltato
+ * 
+ * Questa strategia analizza gli eventi musicali per determinare quale artista
+ * ha il maggior numero di ascolti. Include anche statistiche opzionali su
+ * genere, dispositivo e paese se disponibili.
+ * 
+ * @module MostPlayedArtistStrategy
+ * @author Lionel Djouaka
+ */
+import { IStatisticsStrategy, StatisticsResult } from "./IStatisticStrategy";
 import MusicEvent from "../models/MusicEvent";
 
 export class MostPlayedArtistStrategy implements IStatisticsStrategy {
@@ -32,7 +42,7 @@ export class MostPlayedArtistStrategy implements IStatisticsStrategy {
             }
         });
 
-        
+
 
         // Calcola statistiche per genre, device, country (se disponibili)
         const genreStats = this.calculateOptionalFieldStats(events, 'genre');

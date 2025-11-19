@@ -1,9 +1,39 @@
+/**
+ * Controller per la gestione delle statistiche musicali
+ * 
+ * Questo controller gestisce tutte le richieste HTTP relative alle statistiche,
+ * fornendo endpoint per recuperare diverse tipologie di analisi sui dati musicali.
+ * 
+ * @module StatisticsController
+ * @author Lionel Djouaka
+ */
 import { Request, Response } from "express";
 import { StatisticService } from "../services/StatisticService";
 import { MusicEventRepository } from "../repositories/MusicEventRepository";
 
+/**
+ * Classe controller per le statistiche musicali
+ * 
+ * Gestisce le operazioni di recupero e calcolo delle statistiche sugli eventi musicali,
+ * fornendo endpoint REST per diverse tipologie di analisi.
+ * 
+ * @class StatatisticsController
+ */
 export class StatatisticsController {
+     /**
+     * Servizio per il calcolo delle statistiche
+     * 
+     * @private
+     * @type {StatisticService}
+     */
      private statisticService: StatisticService;
+
+     /**
+      * Repository per l'accesso agli eventi musicali
+      * 
+      * @private
+      * @type {MusicEventRepository}
+      */
      private musicEventRepository: MusicEventRepository;
 
      constructor(statisticService: StatisticService, musicEventRepository: MusicEventRepository) {
@@ -11,6 +41,19 @@ export class StatatisticsController {
           this.musicEventRepository = musicEventRepository;
      }
 
+     /**
+      * Recupera l'artista più ascoltato
+      * 
+      * Endpoint GET per ottenere l'artista con il maggior numero di ascolti.
+      * Supporta un parametro opzionale 'date' per filtrare per data specifica.
+      * 
+      * @async
+      * @method getMostPlayedArtist
+      * @param {Request} req - Oggetto richiesta Express (può contenere query param 'date')
+      * @param {Response} res - Oggetto risposta Express
+      * @returns {Promise<void>} Promise che si risolve quando la risposta è inviata
+      *
+      */
      async getMostPlayedArtist(req: Request, res: Response): Promise<void> {
           try {
                const events = req.query.date 

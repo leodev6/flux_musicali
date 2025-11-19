@@ -1,3 +1,11 @@
+/**
+ * Test suite per EventProcessingService
+ * 
+ * Testa la logica di business per l'elaborazione degli eventi musicali,
+ * inclusa la validazione, la persistenza e la notifica agli observer.
+ * 
+ * @module EventProcessingService.test
+ */
 import { EventProcessingService, MusicEventInput } from '../../services/EventProcessingService';
 import MusicEventRepository from '../../repositories/MusicEventRepository';
 import { EventSubject } from '../../observers/EventSubject';
@@ -7,6 +15,10 @@ import { MusicEvent } from '../../models/MusicEvent';
 jest.mock('../../repositories/MusicEventRepository');
 jest.mock('../../observers/EventSubject');
 
+/**
+ * Suite principale che testa l'intero servizio di elaborazione eventi,
+ * coprendo validazione, persistenza, streaming RxJS e notifiche agli observer.
+ */
 describe('EventProcessingService', () => {
      let eventProcessingService: EventProcessingService;
      let mockMusicEventRepository: jest.Mocked<MusicEventRepository>;
@@ -33,6 +45,10 @@ describe('EventProcessingService', () => {
           );
      });
 
+     /**
+      * Verifica la pipeline di `processEvent`, dal controllo input alla creazione
+      * su database e notifica degli observer, coprendo anche i casi di errore.
+      */
      describe('processEvent', () => {
           const validEventData: MusicEventInput = {
                userId: 'u1',

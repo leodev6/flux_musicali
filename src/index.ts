@@ -1,3 +1,13 @@
+/**
+ * File principale dell'applicazione Flux Musicali
+ * 
+ * Questo file gestisce l'inizializzazione e l'avvio del server Express,
+ * configurando tutti i middleware, i servizi, i repository, gli observer
+ * e le route necessarie per il funzionamento dell'applicazione.
+ * 
+ * @module index
+ * @author Lionel Djouaka
+ */
 import { StatisticsObserver } from './observers/StastisticsObserver';
 import { StatisticService } from './services/StatisticService';
 import { EventController } from './controllers/EventController';
@@ -14,17 +24,36 @@ import { createRoutes } from './routes';
 import { StatatisticsController } from './controllers';
 import StatatisticRepository from './repositories/StatisticsRepository';
 
+// Caricamento delle variabili d'ambiente dal file .env
 dotenv.config();
+// Inizializzazione dell'applicazione Express
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
-//Middleware
+/**
+ * Configurazione dei middleware Express
+ * 
+ * - cors: Abilita le richieste cross-origin per consentire l'accesso da domini diversi
+ * - express.json: Permette il parsing del body delle richieste in formato JSON
+ * - express.urlencoded: Permette il parsing del body delle richieste in formato URL-encoded
+ */
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-//Inizializzazione la connexìzione al database
+/**
+ * Inizializza la connessione al database PostgreSQL
+ * 
+ * Questa funzione autentica la connessione al database e sincronizza
+ * i modelli Sequelize con le tabelle del database. In caso di errore,
+ * l'applicazione viene terminata.
+ * 
+ * @async
+ * @function inizializeDatabase
+ * @returns {Promise<void>} Promise che si risolve quando il database è inizializzato
+ * @throws {Error} Se la connessione al database fallisce
+ */
 async function inizializeDatabase(): Promise<void> {
      try {
           await sequelize.authenticate();
@@ -38,7 +67,18 @@ async function inizializeDatabase(): Promise<void> {
 }
 
 
-//Inizializzazione dei servizi e le dipendenze
+/**
+ * Inizializza tutti i servizi e le dipendenze dell'applicazione
+ * 
+ * Questa funzione crea e configura:
+ * - I repository per l'accesso ai dati (MusicEventRepository, StatatisticRepository)
+ * - I servizi di business logic (EventProcessingService, StatisticService)
+ * - Gli observer per il pattern Observer (StatisticsObserver)
+ * - I controller per gestire le richieste HTTP (EventController, StatatisticsController)
+ * - Le route API e le associa all'applicazione Express
+ * 
+ * @function initializaServices
+ */
 function initializaServices() {
      //RInizializzazione dei repository per l'accesso ai dati
      const musicEventRepository = new MusicEventRepository();
@@ -64,7 +104,18 @@ function initializaServices() {
      console.log('Inizializzazione del servizio corretto.')
 }
 
-//Errore nella gestione del middleware
+/**
+ * Middleware per la gestione degli errori globali
+ * 
+ * Questo middleware cattura tutti gli errori non gestiti e restituisce
+ * una risposta JSON standardizzata. In modalità development, include
+ * anche il messaggio di errore dettagliato.
+ * 
+ * @param {Error} err - L'errore catturato
+ * @param {express.Request} req - Oggetto richiesta Express
+ * @param {express.Response} res - Oggetto risposta Express
+ * @param {express.NextFunction} next - Funzione per passare al middleware successivo
+ */
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
      console.error('Error: ', err);
      res.status(500).json({
@@ -74,7 +125,18 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
      });
 });
 
-
+/**
+ * Avvia il server Express
+ * 
+ * Questa funzione inizializza il database, configura tutti i servizi
+ * e avvia il server HTTP sulla porta specificata. In caso di errore,
+ * l'applicazione viene terminata.
+ * 
+ * @async
+ * @function startServer
+ * @returns {Promise<void>} Promise che si risolve quando il server è avviato
+ * @throws {Error} Se l'avvio del server fallisce
+ */
 async function startServer(): Promise<void> {
      try {
           await inizializeDatabase();
@@ -90,6 +152,5 @@ async function startServer(): Promise<void> {
           process.exit(1)
      }
 }
-
 
 startServer();

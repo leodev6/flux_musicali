@@ -1,13 +1,26 @@
+/**
+ * Test suite per StatisticsController
+ * 
+ * Testa tutte le funzionalità del controller delle statistiche,
+ * inclusi il recupero di diverse tipologie di statistiche.
+ * 
+ * @module StatisticsController.test
+ */
 import { Request, Response } from 'express';
 import { StatatisticsController } from '../../controllers/StatisticsController';
 import { StatisticService } from '../../services/StatisticService';
 import { MusicEventRepository } from '../../repositories/MusicEventRepository';
-import { StatisticsResult } from '../../strategies/IStatistiqueStrategy';
+import { StatisticsResult } from '../../strategies/IStatisticStrategy';
+
 
 // Mock dei servizi
 jest.mock('../../services/StatisticService');
 jest.mock('../../repositories/MusicEventRepository');
 
+/**
+ * Suite principale che valida l'intero controller delle statistiche,
+ * assicurandosi che ogni endpoint esponga i dati corretti e gestisca gli errori.
+ */
 describe('StatatisticsController', () => {
      let statisticsController: StatatisticsController;
      let mockStatisticService: jest.Mocked<StatisticService>;
@@ -43,6 +56,10 @@ describe('StatatisticsController', () => {
           };
      });
 
+     /**
+      * Verifica l'endpoint GET /api/statistics/artista_piu_suonato,
+      * includendo filtri per data e gestione errori del servizio.
+      */
      describe('getMostPlayedArtist', () => {
           it('dovrebbe recuperare l\'artista più ascoltato con successo', async () => {
                const mockResult: StatisticsResult = {

@@ -1,9 +1,34 @@
+/**
+ * Servizio per l'elaborazione degli eventi musicali
+ * 
+ * Questo servizio gestisce la logica di business per l'elaborazione degli eventi musicali,
+ * inclusa la validazione, la persistenza nel database, la notifica agli observer
+ * e la gestione di un flusso reattivo utilizzando RxJS.
+ * 
+ * @module EventProcessingService
+ * @author Lionel Djouaka
+ */
 import { Subject, Observable } from 'rxjs';
 import { MusicEvent, MusicEventCreationAttributes } from '../models/MusicEvent';
 import MusicEventRepository from '../repositories/MusicEventRepository';
 import EventSubject from '../observers/EventSubject';
 
-
+/**
+ * Interfaccia per i dati di input di un evento musicale
+ * 
+ * Definisce la struttura dei dati richiesti per creare un nuovo evento musicale.
+ * Il timestamp è una stringa che verrà convertita in Date durante l'elaborazione.
+ * 
+ * @interface MusicEventInput
+ * @property {string} userId - Identificatore dell'utente
+ * @property {string} trackId - Identificatore del brano musicale
+ * @property {string} artist - Nome dell'artista
+ * @property {number} duration - Durata dell'ascolto in secondi
+ * @property {string} [genre] - Genere musicale (opzionale)
+ * @property {string} [country] - Codice paese (opzionale)
+ * @property {string} [device] - Tipo di dispositivo (opzionale)
+ * @property {string} timestamp - Timestamp dell'evento come stringa ISO
+ */
 
 export interface MusicEventInput {
      userId: string,
@@ -16,6 +41,14 @@ export interface MusicEventInput {
      timestamp: string,
 }
 
+/**
+ * Classe servizio per l'elaborazione degli eventi musicali
+ * 
+ * Gestisce l'intero ciclo di vita di un evento musicale: validazione,
+ * persistenza, notifica agli observer e gestione del flusso reattivo.
+ * 
+ * @class EventProcessingService
+ */
 export class EventProcessingService {
      private musicEventRepository: MusicEventRepository;
      private eventSubject: EventSubject;

@@ -1,11 +1,23 @@
+/**
+ * Test suite per StatisticService
+ * 
+ * Testa il servizio per il calcolo delle statistiche utilizzando il pattern Strategy.
+ * 
+ * @module StatisticService.test
+ */
 import { StatisticService } from '../../services/StatisticService';
 import { MusicEventRepository } from '../../repositories/MusicEventRepository';
-import { StatisticsStrategyFactory } from '../../strategies/StatistiquStrategyFactory';
 import { MusicEvent } from '../../models/MusicEvent';
-import { StatisticsResult } from '../../strategies/IStatistiqueStrategy';
-// Mock della factory
-jest.mock('../../strategies/StatistiquStrategyFactory');
+import StatisticsStrategyFactory from '../../strategies/StatisticsStrategyFactory';
+import { StatisticsResult } from '../../strategies/IStatisticStrategy';
 
+// Mock della factory
+jest.mock('../../strategies/StatisticsStrategyFactory');
+
+/**
+ * Suite principale che garantisce la correttezza del servizio di statistiche,
+ * verificando l'integrazione con repository e strategie dinamiche.
+ */
 describe('StatisticService', () => {
      let statisticService: StatisticService;
      let mockMusicEventRepository: jest.Mocked<MusicEventRepository>;

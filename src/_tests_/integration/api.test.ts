@@ -1,3 +1,16 @@
+/**
+ * Test d'integrazione per verificare che più componenti 
+ * dell’applicazione funzionino correttamente insieme.
+ * 
+ * Lo scopo di assicurare che: 
+ * -i controller comunichino correttamente con i service
+ * -i service utilizzino in modo corretto i repository
+ * -i vari pattern (Observer, Strategy, Subject, Repository…) funzionino bene tra loro
+ * -le route HTTP rispondano come previsto
+ * -i dati fluiscano correttamente attraverso tutti i livelli dell’applicazione
+ * 
+ * @module api.test
+ */
 import { StatisticsObserver } from './../../observers/StastisticsObserver';
 import { StatatisticRepository } from './../../repositories/StatisticsRepository';
 import request from 'supertest';
@@ -10,10 +23,20 @@ import { EventSubject } from '../../observers/EventSubject';
 import { StatisticService } from '../../services/StatisticService';
 import { StatatisticsController } from '../../controllers';
 
-
+/**
+ * Test di integrazione sull'API.
+ * 
+ * Obiettivo:
+ *  - Verificare che l'applicazione esponga correttamente gli endpoint principali
+ *  - Controllare che il wiring tra controller, servizi, repository e observer funzioni
+ *    come previsto in un flusso “quasi reale”.
+ */
 describe('API Integration Tests', () => {
      let app: express.Application;
-
+     /**
+     * Inizializza una piccola applicazione Express prima
+     * dell'esecuzione dell'intera suite di test.
+     */
      beforeAll(() => {
           // Setup test app
           app = express();

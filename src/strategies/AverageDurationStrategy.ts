@@ -1,22 +1,31 @@
-import { IStatisticsStrategy, StatisticsResult } from "./IStatistiqueStrategy";
+/**
+ * Strategia per calcolare la durata media degli ascolti
+ * 
+ * Questa strategia calcola la durata media in secondi degli eventi musicali,
+ * includendo anche statistiche opzionali su genere, dispositivo e paese se disponibili.
+ * 
+ * @module AverageDurationStrategy
+ * @author Lionel Djouaka
+ */
+import { IStatisticsStrategy, StatisticsResult } from "./IStatisticStrategy";
 import MusicEvent from "../models/MusicEvent";
 
 export class AverageDurationStrategy implements IStatisticsStrategy {
-    
+
      getType(): string {
-          return 'durata_media'; 
-     } 
-     
+          return 'durata_media';
+     }
+
      async calculate(events: MusicEvent[]): Promise<StatisticsResult> {
           if (events.length === 0) {
                return {
                     type: this.getType(),
                     value: 0,
-                    metadata: { message: 'Nessun evento disponibile'},
+                    metadata: { message: 'Nessun evento disponibile' },
                };
           }
 
-          const totalDuration = events.reduce((sum, event) => sum + event.duration , 0);
+          const totalDuration = events.reduce((sum, event) => sum + event.duration, 0);
           const averageDuration = totalDuration / events.length;
 
           // Calcola statistiche per genre, device, country (se disponibili)

@@ -1,7 +1,18 @@
+/**
+ * Test suite per EventSubject
+ * 
+ * Testa l'implementazione del pattern Observer per la gestione degli observer.
+ * 
+ * @module EventSubject.test
+ */
 import { EventSubject } from '../../observers/EventSubject';
 import { IObserver } from '../../observers/IObserver';
 import { MusicEvent } from '../../models/MusicEvent';
 
+/**
+ * Suite che verifica l'implementazione del pattern Observer assicurando
+ * la corretta gestione di attach, detach e notifiche anche in presenza di errori.
+ */
 describe('EventSubject', () => {
      let eventSubject: EventSubject;
      let mockObserver1: jest.Mocked<IObserver>;
