@@ -10,6 +10,5 @@ const models = {
      Statistic,
      sequelize,
 };
-
 export default models;
 
